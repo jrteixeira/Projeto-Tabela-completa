@@ -1,0 +1,357 @@
+<html lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        
+    </script>
+</head>
+<body>
+    <div class="table-responsive">
+        
+              <div id="popup_selectColumns" class="ui custom popup top left transition hidden columns">
+                <div class="ui checkbox"><input type="checkbox" id="id_status" name="status" onclick=""><label>status</label></div>
+                <div class="ui checkbox"><input type="checkbox" id="id_placa" name="placa" onclick=""><label>placa</label></div>
+                <div class="ui checkbox"><input type="checkbox" id="id_eventos" name="eventos" onclick=""><label>eventos</label></div>
+                <div class="ui checkbox"><input type="checkbox" id="id_sinalgsm" name="sinalgsm" onclick=""><label>sinalgsm</label></div>
+                <div class="ui checkbox"><input type="checkbox" id="id_dispositivo" name="dispositivo" onclick=""><label>dispositivo</label></div>
+                <div class="ui checkbox"><input type="checkbox" id="id_sinalValido" name="sinalValido" onclick=""><label>sinalValido</label></div>
+              </div>
+        <h1 style="text-align: center; margin-bottom: 3rem;">Teste de tabela dinamica</h1>
+        <!-- <div class="ui vertical labeled icon buttons margin-r-1"> -->
+        <button class="ui button selectColumns margin-r-1">
+            <i class="eye slash outline icon" style="color: black;"></i>
+            Ocultar colunas
+          </button>
+        <!-- </div> -->
+        <button class="ui blue button" onclick="limpaFiltros()">Limpa filtros</button>
+        <table id="tabela_criada"  class="ui unstackable table striped celled" style="width: 1200px !important;">
+            <thead>
+                <tr>
+                    <th id="header_status" class="max-w" name="status" draggable="true">
+                        <label for="">Status</label>
+                            <i class="sort alphabet up icon"></i>
+                        </div>
+                    </th>
+                    <th id="header_placa" class="max-w" name="placa" draggable="true">
+                        <i id="search_placa" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Placa</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" placeholder="Procurar por placa">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_eventos" class="max-w" name="eventos" draggable="true">
+                        <label for="">Eventos</label>
+                            <i class="icon search check eventos"></i>
+                            <i class="sort alphabet up icon"></i>
+                        <div id="popup_eventos" class="ui custom popup top left transition hidden">
+                        </div>
+                    </th>
+                    <th id="header_sinalgsm" class="max-w" name="sinalgsm" draggable="true">
+                        <label for="">Nivel de sinal GSM</label>
+                        <i class="icon search check sinalgsm"></i>
+                        <i class="sort alphabet up icon"></i>
+                        <div id="popup_sinalgsm" class="ui custom popup top left transition hidden">
+                        </div>
+                    </th>
+                    <th id="header_dispositivo" class="max-w" name="dispositivo" draggable="true">
+                        <i id="search_dispositivo" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Dispositivo</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" placeholder="Procurar por dispositivo">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_sinalValido" class="max-w" name="sinalValido" draggable="true">
+                        <label for="">Eventos</label>
+                            <i class="icon search check sinalValido"></i>
+                            <i class="sort alphabet up icon"></i>
+                        <div id="popup_sinalValido" class="ui custom popup top left transition hidden">
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script id="scriptAuxiliar">
+        // <![CDATA[
+        // Ativação de popup para ocultar tabelas
+        $('.ui.button.selectColumns')
+        .popup({
+            popup : $('#popup_selectColumns'),
+            on    : 'click',
+            position : 'right center'
+        })
+        ;
+        // Ativação de popup eventos
+        $('.icon.search.check.eventos')
+        .popup({
+            popup : $('#popup_eventos'),
+            on    : 'click'
+        })
+        ;
+        // Ativação de popup Nivel de sinal GSM
+        $('.icon.search.check.sinalgsm')
+        .popup({
+            popup : $('#popup_sinalgsm'),
+            on    : 'click'
+        })
+        ;
+        // Ativação de popup Sinal valido
+        $('.icon.search.check.sinalValido')
+        .popup({
+            popup : $('#popup_sinalValido'),
+            on    : 'click'
+        })
+        ;
+        // ]]>
+    </script>
+
+<script id="scriptGeral">
+    // <![CDATA[
+    // ** Variaveis Gerais **
+    //
+   let data = [{
+    "status": "2",    
+    "placa": "ABC1238",
+        "eventos": "posição",
+        "sinalgsm": "Alto",
+        "dispositivo": "736512",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "2",
+        "placa": "ASD0989",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Baixo",
+        "dispositivo": "452165",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "1",
+        "placa": "TLK1234",
+        "eventos": "posição",
+        "sinalgsm": "Médio",
+        "dispositivo": "586243",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "4",
+        "placa": "MAN1145",
+        "eventos": "Alerta de temperatura",
+        "sinalgsm": "Baixo",
+        "dispositivo": "751695",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "5",
+        "placa": "FGR4562",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Médio",
+        "dispositivo": "463156",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "1",
+        "placa": "GST7851",
+        "eventos": "posição",
+        "sinalgsm": "Baixo",
+        "dispositivo": "554986",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "3",
+        "placa": "DSP2121",
+        "eventos": "Alerta de temperatura",
+        "sinalgsm": "Médio",
+        "dispositivo": "245132",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "2",
+        "placa": "FGB8752",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Alto",
+        "dispositivo": "001253",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "1",
+        "placa": "VSN9090",
+        "eventos": "Detecção jammer",
+        "sinalgsm": "Alto",
+        "dispositivo": "785012",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "2",
+        "placa": "ASD5246",
+        "eventos": "Alerta de temperatura",
+        "sinalgsm": "Baixo",
+        "dispositivo": "695315",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "2",
+        "placa": "FSD5555",
+        "eventos": "posição",
+        "sinalgsm": "Médio",
+        "dispositivo": "413201",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "3",
+        "placa": "BDC7586",
+        "eventos": "posição",
+        "sinalgsm": "Alto",
+        "dispositivo": "014523",
+        "sinalValido": "Sim"
+    },
+    {
+        "status": "1",
+        "placa": "HSG8512",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Médio",
+        "dispositivo": "745896",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "3",
+        "placa": "TRL2356",
+        "eventos": "posição",
+        "sinalgsm": "Alto",
+        "dispositivo": "258741",
+        "sinalValido": "Não"
+    },
+    {
+        "status": "3",
+        "placa": "UBS1010",
+        "eventos": "Detecção de corte de antena GPS",
+        "sinalgsm": "Baixo",
+        "dispositivo": "114569",
+        "sinalValido": "Não"
+    }];
+    const dataBackup = data;
+    const allHeadersInput = $('#tabela_criada thead .action.input input');
+   
+    // Click find input
+    for(var i = 0; i < allHeadersInput.length; ++i){    
+        var id = allHeadersInput[i].parentElement.parentElement.firstChild.nextSibling.getAttribute("id");
+        var idCompleto = "#"+id;
+        $(idCompleto).click(function(){
+            $(this).addClass('d-none');
+            $(this).siblings('label').addClass('d-none');
+            $(this).siblings('.ui.input').removeClass('d-none');
+        });
+    };
+
+    // Click find input voltar
+    $(function(){
+        $("#tabela_criada thead .action.input .icon.button").click(function(){
+            
+            var teste = this.parentElement;
+            $(teste).addClass('d-none');
+            $(teste).siblings('label').removeClass('d-none');
+            $(teste).siblings('.search.icon').removeClass('d-none');
+        });
+    });
+
+    // Populando filtro de eventos
+    const Eventos = data.map(variavel => {
+            return  variavel.eventos;
+    });
+    Eventos.unique().forEach(eve =>{
+        $('#header_eventos .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_'+eve+'" name="'+eve+'"><label>'+eve+'</label></div>');
+    });
+    //
+
+    // Populando filtro de Nivel de sinal GMS
+    const sinalGSM = data.map(variavel => {
+            return  variavel.sinalgsm;
+    });
+    sinalGSM.unique().forEach(signal =>{
+        $('#header_sinalgsm .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_'+signal+'" name="'+signal+'"><label>'+signal+'</label></div>');
+    });
+
+    // Populando filtro de sinal valido
+    const SinalValido = data.map(variavel => {
+            return  variavel.sinalValido;
+    });
+    SinalValido.unique().forEach(signal =>{
+        $('#header_sinalValido .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_'+signal+'" name="'+signal+'"><label>'+signal+'</label></div>');
+    });
+    
+    const allCheckboxColumns = $('.ui.custom.popup.columns .ui.checkbox'); // Array com todos os checkBox para ocultar colunas
+    const allCheckboxFilter = $('thead .ui.custom.popup .ui.checkbox'); // Array com todos os checkBox
+    const allSortIcons = $('thead tr th .sort.alphabet.icon'); // Array com todos os icones de ordenação
+    const allHeaders = $('thead tr th'); // Array com todos os Headers
+    
+
+    // Insere funcao de filtro em cada checkBox
+    for (var i = 0; i < allCheckboxFilter.length; ++i) {
+        if(allCheckboxFilter[i].className == 'ui checkbox'){
+            var idParametro = allCheckboxFilter[i].parentNode.getAttribute("id")
+            var nameParametro = allCheckboxFilter[i].parentNode.parentNode.getAttribute("name")
+            const name = allCheckboxFilter[i].firstChild.name;
+            const id_name = document.getElementById('id_'+name);
+            id_name.setAttribute('onClick', "filtroCheckbox()")
+            $('#scriptGeral').innerText = 'var filtro_' + nameParametro;
+        }
+    };
+    // Insere funcao de ocultar colunas em cada checkBox
+    for (var i = 0; i < allCheckboxColumns.length; ++i) {
+        if(allCheckboxColumns[i].className == 'ui checkbox'){
+            var idParametro = allCheckboxColumns[i].firstChild.getAttribute("id")
+            console.log(idParametro)
+            const id_name = document.getElementById(idParametro);
+            console.log(id_name)
+            id_name.setAttribute('onClick', "ocultaColunas()")
+        }
+    };
+
+    // Insere funcao oredenacao em cada Header
+    for (var i = 0; i < allSortIcons.length; ++i) {
+            var indiceParametro = i;
+            allSortIcons[i].setAttribute('onClick', "sortTable("+indiceParametro+"); changeIcon("+indiceParametro+")")
+        
+    };
+
+    // Criando Variaveis que armazenam listas de acordo com cada coluna
+    $(document).ready(function(){
+        var script = document.createElement('script');
+        for(var i = 0; i < allHeaders.length; i++){
+            var aux = [];
+            var varname = allHeaders[i].getAttribute("name");
+            if(typeof "filtro_"+varname != 'undefined'){
+                window[eval( "filtro_"+varname + " = aux ;" )]
+            }
+        }
+        document.body.appendChild(script);
+    });
+
+populaTabela();
+
+
+</script>
+
+
+</body>
+</html>
