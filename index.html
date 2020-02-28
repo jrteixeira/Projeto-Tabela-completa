@@ -24,6 +24,7 @@
                 <div class="ui checkbox"><input type="checkbox" id="id_sinalgsm" name="sinalgsm" onclick=""><label>sinalgsm</label></div>
                 <div class="ui checkbox"><input type="checkbox" id="id_dispositivo" name="dispositivo" onclick=""><label>dispositivo</label></div>
                 <div class="ui checkbox"><input type="checkbox" id="id_sinalValido" name="sinalValido" onclick=""><label>sinalValido</label></div>
+                <div class="ui checkbox"><input type="checkbox" id="id_dtComunicacao" name="dtComunicacao" onclick=""><label>Data comunicação</label></div>
               </div>
         <h1 style="text-align: center; margin-bottom: 3rem;">Teste de tabela dinamica</h1>
         <!-- <div class="ui vertical labeled icon buttons margin-r-1"> -->
@@ -33,7 +34,7 @@
           </button>
         <!-- </div> -->
         <button class="ui blue button" onclick="limpaFiltros()">Limpa filtros</button>
-        <table id="tabela_criada"  class="ui unstackable table striped celled" style="width: 1200px !important;">
+        <table id="tabela_criada"  class="ui unstackable table striped celled" style="width: 1500px !important;">
             <thead>
                 <tr>
                     <th id="header_status" class="max-w" name="status" draggable="true">
@@ -45,7 +46,7 @@
                         <i id="search_placa" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
                         <label class="p-x-1">Placa</label>
                         <div class="ui action input d-none p-r-1">
-                            <input type="text" placeholder="Procurar por placa">
+                            <input type="text" class="letter" placeholder="Procurar por placa">
                             <button class="ui icon button">
                                 <i class="reply icon"></i>
                             </button>
@@ -70,7 +71,7 @@
                         <i id="search_dispositivo" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
                         <label class="p-x-1">Dispositivo</label>
                         <div class="ui action input d-none p-r-1">
-                            <input type="text" placeholder="Procurar por dispositivo">
+                            <input type="text" class="letter" placeholder="Procurar por dispositivo">
                             <button class="ui icon button">
                                 <i class="reply icon"></i>
                             </button>
@@ -83,6 +84,17 @@
                             <i class="sort alphabet up icon"></i>
                         <div id="popup_sinalValido" class="ui custom popup top left transition hidden">
                         </div>
+                    </th>
+                    <th id="header_dtComunicacao" class="max-w" name="dtComunicacao" draggable="true">
+                        <i id="search_dtComunicacao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Data comunicação</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" class="date" placeholder="Procurar por data de comunicação">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
                     </th>
                 </tr>
             </thead>
@@ -135,7 +147,8 @@
         "eventos": "posição",
         "sinalgsm": "Alto",
         "dispositivo": "736512",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "12/02/2020"
     },
     {
         "status": "2",
@@ -143,7 +156,8 @@
         "eventos": "posição em sleep",
         "sinalgsm": "Baixo",
         "dispositivo": "452165",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "21/02/2020"
     },
     {
         "status": "1",
@@ -151,7 +165,8 @@
         "eventos": "posição",
         "sinalgsm": "Médio",
         "dispositivo": "586243",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "20/02/2020"
     },
     {
         "status": "4",
@@ -159,7 +174,8 @@
         "eventos": "Alerta de temperatura",
         "sinalgsm": "Baixo",
         "dispositivo": "751695",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "01/02/2020"
     },
     {
         "status": "5",
@@ -167,7 +183,8 @@
         "eventos": "posição em sleep",
         "sinalgsm": "Médio",
         "dispositivo": "463156",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "15/02/2020"
     },
     {
         "status": "1",
@@ -175,7 +192,8 @@
         "eventos": "posição",
         "sinalgsm": "Baixo",
         "dispositivo": "554986",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "05/02/2020"
     },
     {
         "status": "3",
@@ -183,7 +201,8 @@
         "eventos": "Alerta de temperatura",
         "sinalgsm": "Médio",
         "dispositivo": "245132",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "28/02/2020"
     },
     {
         "status": "2",
@@ -191,7 +210,8 @@
         "eventos": "posição em sleep",
         "sinalgsm": "Alto",
         "dispositivo": "001253",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "03/02/2020"
     },
     {
         "status": "1",
@@ -199,7 +219,8 @@
         "eventos": "Detecção jammer",
         "sinalgsm": "Alto",
         "dispositivo": "785012",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "11/02/2020"
     },
     {
         "status": "2",
@@ -207,7 +228,8 @@
         "eventos": "Alerta de temperatura",
         "sinalgsm": "Baixo",
         "dispositivo": "695315",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "19/02/2020"
     },
     {
         "status": "2",
@@ -215,7 +237,8 @@
         "eventos": "posição",
         "sinalgsm": "Médio",
         "dispositivo": "413201",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "13/02/2020"
     },
     {
         "status": "3",
@@ -223,7 +246,8 @@
         "eventos": "posição",
         "sinalgsm": "Alto",
         "dispositivo": "014523",
-        "sinalValido": "Sim"
+        "sinalValido": "Sim",
+        "dtComunicacao": "29/01/2020"
     },
     {
         "status": "1",
@@ -231,7 +255,8 @@
         "eventos": "posição em sleep",
         "sinalgsm": "Médio",
         "dispositivo": "745896",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "20/01/2020"
     },
     {
         "status": "3",
@@ -239,7 +264,8 @@
         "eventos": "posição",
         "sinalgsm": "Alto",
         "dispositivo": "258741",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "30/12/2019"
     },
     {
         "status": "3",
@@ -247,7 +273,8 @@
         "eventos": "Detecção de corte de antena GPS",
         "sinalgsm": "Baixo",
         "dispositivo": "114569",
-        "sinalValido": "Não"
+        "sinalValido": "Não",
+        "dtComunicacao": "05/11/2019"
     }];
     const dataBackup = data;
     const allHeadersInput = $('#tabela_criada thead .action.input input');

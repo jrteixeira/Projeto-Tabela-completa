@@ -48,6 +48,9 @@
         }
     }
 
+    // formata string removendo espaços em branco
+    
+
     // Função que limpa todos os Filtros
     function limpaFiltros(){
         data = dataBackup;
@@ -85,6 +88,7 @@
         const signal = v.sinalgsm;
         const device = v.dispositivo;
         const validSignal = v.sinalValido;
+        const dt_comunication = v.dtComunicacao
         var type = "";
         var color = "";
        
@@ -118,7 +122,8 @@
             + '<td class="max-w w-250" draggable="true" name="eventos" scope="col">' + events + '</td>'
             + '<td class="max-w w-250" draggable="true" name="sinalgsm" scope="col">' + signal + '</td>'
             + '<td class="centered-text max-w w-250" name="dispositivo" draggable="true" scope="col">' + device + '</td>'
-            + '<td class="centered-text max-w w-250" name="sinalValido" draggable="true" scope="col">' + validSignal + '</td></tr>'
+            + '<td class="centered-text max-w w-250" name="sinalValido" draggable="true" scope="col">' + validSignal + '</td>'
+            + '<td class="centered-text max-w w-250" name="dtComunicacao" draggable="true" scope="col">' + dt_comunication + '</td></tr>'
             );
         });
     }
@@ -203,9 +208,9 @@
             }
         }
 
-    // Função para filtrar por valor digitado
+    // Função para filtrar por valor digitado que nao seja data
     $(function(){
-        $("#tabela_criada input").keyup(function(){   
+        $("#tabela_criada input.letter").keyup(function(){   
             var auxiliar = [];  
             var index = $(this).parent().parent().index();
             var coluna = this.parentElement.parentElement.getAttribute("name");
@@ -266,6 +271,94 @@
                 populaTabela();
             }
         });
+    });
+
+    // Filtro para input que contem datas
+    $(function(){
+        $("#tabela_criada input.date").keyup(function(e){   
+            if(e.which == 13){
+            
+            var auxiliar = [];  
+            var index = $(this).parent().parent().index();
+            var coluna = this.parentElement.parentElement.getAttribute("name");
+            window["filtro_"+coluna] = [];
+            
+            var nth = "#tabela_criada td:nth-child("+(index+1).toString()+")";
+            var valor = $(this).val().split(" ");
+            var cond1 = valor[0];
+            var data1 =  valor[1];
+            console.log("25/02/2020".toDate("dd/MM/yyyy", "/"))
+            var cond2 = valor[2];
+            var data2 = new Date(valor[3]);
+            var filtrados = dataBackup.filter((dado)=>{  
+                var dataPrincipal = new Date(dado[coluna])
+                debugger
+                if(cond1 == '>'){
+                    if(dataPrincipal > data1){
+                        console.log("Datas maiores que 25/02/2020")
+                        console.log(dataPrincipal)
+                    }
+                }if(cond1 == '<'){
+                    if(dataPrincipal < data1){
+                        console.log(dataPrincipal + cond1 + data1)
+                        console.log(dataPrincipal)
+                    }
+                }
+            });
+                // var accepted = true;
+                // var filtrados = dataBackup.filter((dado)=>{    
+                    
+                    
+                //     for(var i = 0; i < valor.length; i++){
+                        
+                        
+                //             if(dado[coluna].toUpperCase().indexOf(valor.split("")[i]) >= 0){
+                //                 accepted = true;
+                //             }else{
+                //                 accepted = false;
+                //                 break;
+                //             }  
+                //         }
+                //         if(accepted == true){
+                //             return dado[coluna];
+                //         }
+                //     });
+                    
+                //     if(valor.length == 0){
+                //         accepted = false;
+                //     }
+    
+                // if(filtrados.length != 0){
+                //     filtrados.forEach(i =>{
+                //         window["filtro_"+coluna].push(i)
+                //     })
+                //     window["filtro_"+coluna] =  window["filtro_"+coluna].unique();
+                // }
+            for(var i = 0; i < allHeaders.length; i++){
+                
+                var varname = allHeaders[i].getAttribute("name");
+                
+                
+                if(auxiliar.length != 0 && window["filtro_"+varname].length != 0){
+                    auxiliar = auxiliar.filter(element => window["filtro_"+varname].includes(element));
+                    auxiliar.unique();
+                }
+                if(auxiliar.length == 0){
+                    auxiliar = window["filtro_"+varname];
+                } 
+            }
+    
+            if(auxiliar.length == 0){
+                data = dataBackup;
+                populaTabela();
+            }
+            else{
+                data = auxiliar;
+                populaTabela();
+            }
+        }
+        });
+        
     });
 
     function ocultaColunas(){
