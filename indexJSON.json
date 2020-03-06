@@ -1,105 +1,165 @@
 [{
-    "status": "2",    
-    "nome": "Ricardo",
-        "genero": "masculino",
-        "idade": "23",
-        "email": "teste@teste"
+    "status": "1",    
+    "placa": "ABC1238",
+        "eventos": "posição",
+        "sinalgsm": "Alto",
+        "dispositivo": "736512",
+        "sinalValido": "Sim",
+        "dtComunicacao": "12/02/2020 10:22:38",
+        "itvlPosicao": "12:00:00",
+        "bateria": "10%"
     },
     {
         "status": "2",
-        "nome": "Patricia",
-        "genero": "feminino",
-        "idade": "31",
-        "email": "patricia@teste"
+        "placa": "ASD0989",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Baixo",
+        "dispositivo": "452165",
+        "sinalValido": "Não",
+        "dtComunicacao": "21/02/2020 10:22:38",
+        "itvlPosicao": "13:00:00",
+        "bateria": "19%"
     },
     {
         "status": "1",
-        "nome": "Pedro",
-        "genero": "masculino",
-        "idade": "15",
-        "email": "pedro@teste"
+        "placa": "TLK1234",
+        "eventos": "posição",
+        "sinalgsm": "Médio",
+        "dispositivo": "586243",
+        "sinalValido": "Sim",
+        "dtComunicacao": "20/02/2020 10:22:38",
+        "itvlPosicao": "10:00:00",
+        "bateria": "11%"
     },
     {
-        "status": "4",
-        "nome": "Patricio",
-        "genero": "indefinido",
-        "idade": "24",
-        "email": "chuchu@teste"
+        "status": "1",
+        "placa": "MAN1145",
+        "eventos": "Alerta de temperatura",
+        "sinalgsm": "Baixo",
+        "dispositivo": "751695",
+        "sinalValido": "Sim",
+        "dtComunicacao": "01/02/2020 10:22:38",
+        "itvlPosicao": "09:00:00",
+        "bateria": "50%"
+    },
+    {
+        "status": "3",
+        "placa": "FGR4562",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Médio",
+        "dispositivo": "463156",
+        "sinalValido": "Não",
+        "dtComunicacao": "15/02/2020 10:22:38",
+        "itvlPosicao": "11:30:00",
+        "bateria": "100%"
     },
     {
         "status": "5",
-        "nome": "Fernanda",
-        "genero": "feminino",
-        "idade": "43",
-        "email": "fernanda@teste"
-    },
-    {
-        "status": "1",
-        "nome": "marcos",
-        "genero": "masculino",
-        "idade": "11",
-        "email": "marcos@teste"
-    },
-    {
-        "status": "3",
-        "nome": "marcia",
-        "genero": "indefinido",
-        "idade": "21",
-        "email": "indecisa@teste"
+        "placa": "GST7851",
+        "eventos": "posição",
+        "sinalgsm": "Baixo",
+        "dispositivo": "554986",
+        "sinalValido": "Sim",
+        "dtComunicacao": "05/02/2020 10:22:38",
+        "itvlPosicao": "18:22:00",
+        "bateria": "99%"
     },
     {
         "status": "2",
-        "nome": "holinda",
-        "genero": "feminino",
-        "idade": "23",
-        "email": "holinda@teste"
+        "placa": "DSP2121",
+        "eventos": "Alerta de temperatura",
+        "sinalgsm": "Médio",
+        "dispositivo": "245132",
+        "sinalValido": "Não",
+        "dtComunicacao": "28/02/2020 10:22:38",
+        "itvlPosicao": "15:50:00",
+        "bateria": "83%"
     },
     {
         "status": "1",
-        "nome": "Gian",
-        "genero": "homossexual",
-        "idade": "23",
-        "email": "uhul@teste"
+        "placa": "FGB8752",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Alto",
+        "dispositivo": "001253",
+        "sinalValido": "Não",
+        "dtComunicacao": "19/02/2020 07:22:38",
+        "itvlPosicao": "02:09:00",
+        "bateria": "71%"
     },
     {
-        "status": "2",
-        "nome": "renata",
-        "genero": "indefinido",
-        "idade": "28",
-        "email": "renata@teste"
-    },
-    {
-        "status": "2",
-        "nome": "marcos maciel",
-        "genero": "masculino",
-        "idade": "18",
-        "email": "mmarcos@teste"
+        "status": "4",
+        "placa": "VSN9090",
+        "eventos": "Detecção jammer",
+        "sinalgsm": "Alto",
+        "dispositivo": "785012",
+        "sinalValido": "Sim",
+        "dtComunicacao": "19/02/2020 10:22:38",
+        "itvlPosicao": "01:58:00",
+        "bateria": "15%"
     },
     {
         "status": "3",
-        "nome": "Roberto",
-        "genero": "masculino",
-        "idade": "23",
-        "email": "roberto@teste"
+        "placa": "ASD5246",
+        "eventos": "Alerta de temperatura",
+        "sinalgsm": "Baixo",
+        "dispositivo": "695315",
+        "sinalValido": "Sim",
+        "dtComunicacao": "19/02/2020 09:22:38",
+        "itvlPosicao": "22:18:00",
+        "bateria": "100%"
     },
     {
         "status": "1",
-        "nome": "Fabiana",
-        "genero": "feminino",
-        "idade": "25",
-        "email": "fabiana@teste"
+        "placa": "FSD5555",
+        "eventos": "posição",
+        "sinalgsm": "Médio",
+        "dispositivo": "413201",
+        "sinalValido": "Não",
+        "dtComunicacao": "13/02/2020 10:22:38",
+        "itvlPosicao": "04:15:00",
+        "bateria": "100%"
     },
     {
-        "status": "3",
-        "nome": "joão",
-        "genero": "masculino",
-        "idade": "44",
-        "email": "joão@teste"
+        "status": "4",
+        "placa": "BDC7586",
+        "eventos": "posição",
+        "sinalgsm": "Alto",
+        "dispositivo": "014523",
+        "sinalValido": "Sim",
+        "dtComunicacao": "29/01/2020 10:22:38",
+        "itvlPosicao": "23:20:00",
+        "bateria": "74%"
     },
     {
-        "status": "3",
-        "nome": "Silvan",
-        "genero": "Homossapiens",
-        "idade": "28",
-        "email": "sapiens@teste"
+        "status": "1",
+        "placa": "HSG8512",
+        "eventos": "posição em sleep",
+        "sinalgsm": "Médio",
+        "dispositivo": "745896",
+        "sinalValido": "Não",
+        "dtComunicacao": "20/01/2020 10:22:38",
+        "itvlPosicao": "24:10:00",
+        "bateria": "50%"
+    },
+    {
+        "status": "2",
+        "placa": "TRL2356",
+        "eventos": "posição",
+        "sinalgsm": "Alto",
+        "dispositivo": "258741",
+        "sinalValido": "Não",
+        "dtComunicacao": "30/12/2019 10:22:38",
+        "itvlPosicao": "12:50:00",
+        "bateria": "99%"
+    },
+    {
+        "status": "2",
+        "placa": "UBS1010",
+        "eventos": "Detecção de corte de antena GPS",
+        "sinalgsm": "Baixo",
+        "dispositivo": "114569",
+        "sinalValido": "Não",
+        "dtComunicacao": "05/11/2019 10:22:38",
+        "itvlPosicao": "19:02:00",
+        "bateria": "80%"
     }]
