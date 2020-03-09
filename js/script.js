@@ -956,6 +956,19 @@ RfLigado.forEach(signal =>{
                         return dado[coluna];
                     }
                 });
+                if(str.indexOf(">") == -1 && str.indexOf("<") == -1){
+                    if($(this).val() != ""){
+                        var str = $(this).val().replace(/\s/g,'');
+                        str = str.replace(/[=]+/g, '');
+                        var filtrados = dataBackup.filter((dado)=>{  
+                            debugger
+                            var dataPrincipal = dado[coluna].split(" "); // Data que esta sendo comparada
+                            if(dataPrincipal[0] == str){
+                                return dado[coluna]; 
+                            }
+                        });
+                    };
+                }
                 if(filtrados.length != 0){
                     filtrados.forEach(i =>{
                         window["filtro_"+coluna].push(i)
@@ -1084,6 +1097,26 @@ RfLigado.forEach(signal =>{
                         return dado[coluna];
                     }
                 });
+                if(str.indexOf(">") == -1 && str.indexOf("<") == -1){
+                    if($(this).val() != ""){
+                        var str = $(this).val().replace(/\s/g,'');
+                        str = str.replace(/[=]+/g, '');
+                        var filtrados = dataBackup.filter((dado)=>{  
+                            var valorPrincipal = dado[coluna]; // Data que esta sendo comparada
+                            if(valorPrincipal.indexOf("%") != -1 || valorPrincipal.indexOf("°C") != -1 || valorPrincipal.indexOf("MHz") != -1){
+                            valorPrincipal = valorPrincipal.replace(/[%]+/g, '');
+                            valorPrincipal = valorPrincipal.replace(/[.]+/g, '');
+                            valorPrincipal = valorPrincipal.replace(/[°C]+/g, '');
+                            valorPrincipal = valorPrincipal.replace(/[MHz]+/g, '');
+                            valorPrincipal = parseInt(valorPrincipal);
+                            }
+                            debugger
+                            if(valorPrincipal == str){
+                                return dado[coluna]; 
+                            }
+                        });
+                    };
+                }
                 if(filtrados.length != 0){
                     filtrados.forEach(i =>{
                         window["filtro_"+coluna].push(i)
