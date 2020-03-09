@@ -780,18 +780,26 @@ RfLigado.forEach(signal =>{
                     return dado[coluna];
                 }
             });
-                
+              debugger
+            if(valor.length != 0){
+                if(filtrados.length == 0){
+                    data = [];
+                    populaTabela();
+                }
+            }
             if(valor.length == 0){
                 accepted = false;
             }
+            
 
             if(filtrados.length != 0){
                 filtrados.forEach(i =>{
                     window["filtro_"+coluna].push(i)
                 })
                 window["filtro_"+coluna] =  [ ...new Set( window["filtro_"+coluna] ) ];
+                atualizaTabela()
             }
-            atualizaTabela()
+            
         });
     });
 

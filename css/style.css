@@ -42,7 +42,12 @@
             order: 1;
         }
         #popup_selectColumns{
-            min-width: 200px;
+            min-width: 280px;
+            max-height: 450px;
+            overflow: auto;
+        }
+        #popup_selectColumns .ui.checkbox label:hover{
+            cursor: pointer;
         }
         .table-container{
             height: 68vh;
@@ -138,6 +143,9 @@
         }
         .p-r-1{
             padding-right: 1rem;
+        }
+        .p-l-0{
+            padding-left: 0 !important;
         }
         .overflow-auto{
             overflow: auto;
