@@ -692,16 +692,31 @@ RfLigado.forEach(signal =>{
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
-            if (dir == "asc") {
-              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                shouldSwitch= true;
-                break;
-              }
-            } else if (dir == "desc") {
-              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {    
-                shouldSwitch = true;
-                break;
-              }
+            if(x.lastChild.lastChild){
+                if (dir == "asc") {
+                    if (x.lastChild.lastChild.innerHTML.toLowerCase() > y.lastChild.lastChild.innerHTML.toLowerCase()) {
+                      shouldSwitch= true;
+                      break;
+                    }
+                  } else if (dir == "desc") {
+                    if (x.lastChild.lastChild.innerHTML.toLowerCase() < y.lastChild.lastChild.innerHTML.toLowerCase()) {    
+                      shouldSwitch = true;
+                      break;
+                    }
+                  }
+            }
+            else{
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch= true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {    
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
             }
           }
           if (shouldSwitch) {
