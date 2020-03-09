@@ -467,13 +467,6 @@
     }];
     const dataBackup = data;
 
-    // filtro para duplicatas em array
-    // Array.protostatusType.unique = function() {
-    //     return this.filter(function (value, index, self) { 
-    //         return self.indexOf(value) === index;
-    //     });
-    // };
-
     // Função que popula a tabela
     function populaTabela(){
         var tableBody = document.querySelector("tbody");
@@ -540,13 +533,13 @@
         };
         
         if(acoes[0] = 1){
-            statusAcoesMap = "<a style='padding: inherit;'><i class='map marker alternate large icon'></i></a>"
+            statusAcoesMap = "<a style='padding: inherit;' data-tooltip='Exibir mapa'><i class='map marker alternate large icon'></i></a>"
         };
         if(acoes[1] = 1){
-            statusAcoesComando = "<a style='padding: inherit;'><i class='bullseye large icon'></i></a>"
+            statusAcoesComando = "<a style='padding: inherit;' data-tooltip='Exibir comandos'><i class='bullseye large icon'></i></a>"
         };
         if(acoes[2] = 1){
-            statusAcoesDash = "<a style='padding: inherit;'><i class='chart pie large icon'></i></a>"
+            statusAcoesDash = "<a style='padding: inherit;' data-tooltip='Exibir grafico'><i class='chart pie large icon'></i></a>"
         };
         
         if(sinalgsm == "baixo"){
@@ -588,9 +581,9 @@
             + '<td class="centered-text " name="rfLigado" draggable="true" scope="col">' + rfLigado + '</td>'
             + '<td class="centered-text " name="frequencia" draggable="true" scope="col">' + frequencia + '</td>'
             + '<td class="centered-text " name="bateria" draggable="true" scope="col">' + bateria + '</td>'
-            + '<td class="centered-text" name="observacao" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><a class="edit-icon"><i class="edit large icon"></i></a><span>' + observacao + '</span></td>'
-            + '<td class="centered-text" name="enderecoOrigem" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><a class="edit-icon"><i class="edit large icon"></i></a><span>' + enderecoOrigem + '</span></td>'
-            + '<td class="centered-text" name="enderecoDestino" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><a class="edit-icon"><i class="edit large icon"></i></a><span>' + enderecoDestino + '</span></td></tr>'
+            + '<td class="centered-text" name="observacao" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + observacao + '</span></td>'
+            + '<td class="centered-text" name="enderecoOrigem" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + enderecoOrigem + '</span></td>'
+            + '<td class="centered-text" name="enderecoDestino" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + enderecoDestino + '</span></td></tr>'
             );
         });
     }
@@ -1152,29 +1145,6 @@ RfLigado.forEach(signal =>{
             popup[i].lastChild.innerHTML = sub;
           }
     })
-
-    // $(function(){
-    //     var popup = $("#header_sinalgsm .ui.checkbox");
-    //     var id_coluna;
-    //     table = document.getElementById("tabela_criada");
-    //     var filtrados = [];
-    //     rows = table.rows;
-    //     for(i = 0; i< allHeaders.length; i++){
-    //         if(allHeaders[i].getAttribute("id") == "header_sinalgsm"){
-    //             id_coluna = i;
-    //         }    
-    //     }
-    //       for (i = 1; i < (rows.length - 1); i++) {
-    //         x = rows[i].getElementsByTagName("TD")[id_coluna];
-    //         filtrados = filtrados.concat(x.firstChild.getAttribute("name"))
-    //         filtrados = [ ...new Set( filtrados ) ];
-    //       }
-    //       for (i = 0; i < popup.length; i++) {
-    //         var sub = filtrados[i];
-    //         popup[i].lastChild.innerHTML = sub;
-    //       }
-
-    // })
 
     function scrollToSection() {
         let section = $("#tabela_criada th");
