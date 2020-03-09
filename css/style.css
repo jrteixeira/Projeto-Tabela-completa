@@ -134,6 +134,13 @@
             color: black !important;
             transition: 0.3s;
         }
+        .edit-icon{
+            display: block;
+            text-align: end;
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 3px;        
+        }
         .d-none{
             display: none !important;
         }
@@ -208,7 +215,7 @@
             transform: scale(1.03);
             transition: 0.3s;
         }
-        #btn_return:hover{
+        #btn_return:hover, i.edit:hover{
             transform: scale(1.2);
             transition: .3s;
         }

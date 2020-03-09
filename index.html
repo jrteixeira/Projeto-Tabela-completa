@@ -31,7 +31,7 @@
             </div>
         </div>
         <div id="popup_selectColumns" class="ui custom popup top left transition hidden columns">
-            <div class="ui checkbox clear" id="clear_checkbox"><input type="checkbox" style="margin-left: 30px;margin-top: 4px;" onclick="limpaCheckBoxOcultaColunas()"><label>Limpar filtros</label></div>
+            <div class="ui checkbox clear"><input type="checkbox" style="margin-left: 30px;margin-top: 4px;" id="clear_checkbox" onclick="limpaCheckBoxOcultaColunas()"><label for="clear_checkbox">Limpar filtros</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_status" name="status" onclick=""><label for="id_status">status</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_acoes" name="acoes" onclick=""><label for="id_acoes">acoes</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_serial" name="serial" onclick=""><label for="id_serial">serial</label></div>
@@ -57,6 +57,9 @@
             <div class="ui checkbox hide"><input type="checkbox" id="id_rfLigado" name="rfLigado" onclick=""><label for="id_rfLigado">RF ligado</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_frequencia" name="frequencia" onclick=""><label for="id_frequencia">Frequência</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_bateria" name="bateria" onclick=""><label for="id_bateria">Bateria da isca</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_observacao" name="observacao" onclick=""><label for="id_observacao">Observação</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_enderecoOrigem" name="enderecoOrigem" onclick=""><label for="id_enderecoOrigem">Endereço de origem</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_enderecoDestino" name="enderecoDestino" onclick=""><label for="id_enderecoDestino">Endereço de destino</label></div>
             </div>
             <h1 style="text-align: center; margin-bottom: 3rem;">Tabela dinamica</h1>
             <div class="ui grid">
@@ -292,6 +295,31 @@
                         <label class="p-x-1">Bateria da isca</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="porcentagem de bateria">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_observacao" class="max-w" name="observacao" draggable="true">
+                        <label for="">Observação</label>
+                    </th>
+                    <th id="header_enderecoOrigem" class="max-w" name="enderecoOrigem" draggable="true">
+                        <i id="search_enderecoOrigem" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Endereço de origem</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" class="letter" placeholder="Procurar por Endereço origem">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_enderecoDestino" class="max-w" name="enderecoDestino" draggable="true">
+                        <i id="search_enderecoDestino" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Endereço de destino</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" class="letter" placeholder="Procurar por Endereço destino">
                             <button class="ui icon button">
                                 <i class="reply icon"></i>
                             </button>

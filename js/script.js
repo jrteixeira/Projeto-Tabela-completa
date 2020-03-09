@@ -14,7 +14,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Alto",
+        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "12:00:00",
         "itvlPosicaoSleepAtual": "12:00:00",
@@ -26,7 +26,10 @@
         "temperatura": "10°C",
         "rfLigado": "Sim",
         "frequencia": "434.000 MHz",
-        "bateria": "10%"
+        "bateria": "10%",
+        "observacao": "Testar responsividade",
+        "enderecoOrigem": "rua das palmeiras, 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -42,7 +45,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Baixo",
+        "sinalgsm": "medio",
         "sinalValido": "Não",
         "itvlPosicao": "13:00:00",
         "itvlPosicaoSleepAtual": "13:00:00",
@@ -54,7 +57,10 @@
         "temperatura": "55°C",
         "rfLigado": "Não",
         "frequencia": "34.000 MHz",
-        "bateria": "19%"
+        "bateria": "19%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -70,7 +76,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Médio",
+        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "1:00:00",
         "itvlPosicaoSleepAtual": "14:00:00",
@@ -82,7 +88,10 @@
         "temperatura": "14°C",
         "rfLigado": "Não",
         "frequencia": "434.000 MHz",
-        "bateria": "11%"
+        "bateria": "11%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -98,7 +107,7 @@
         "latitude": "-47.082.024",
         "eventos": "Alerta de temperatura",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Baixo",
+        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "09:00:00",
         "itvlPosicaoSleepAtual": "16:00:00",
@@ -110,7 +119,10 @@
         "temperatura": "19°C",
         "rfLigado": "Sim",
         "frequencia": "44.000 MHz",
-        "bateria": "50%"
+        "bateria": "50%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -126,7 +138,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Médio",
+        "sinalgsm": "baixo",
         "sinalValido": "Não",
         "itvlPosicao": "11:30:00",
         "itvlPosicaoSleepAtual": "17:00:00",
@@ -138,7 +150,10 @@
         "temperatura": "23°C",
         "rfLigado": "Sim",
         "frequencia": "90.000 MHz",
-        "bateria": "100%"
+        "bateria": "100%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -154,7 +169,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Baixo",
+        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "18:22:00",
         "itvlPosicaoSleepAtual": "18:00:00",
@@ -166,7 +181,10 @@
         "temperatura": "87°C",
         "rfLigado": "Não",
         "frequencia": "1.000 MHz",
-        "bateria": "99%"
+        "bateria": "99%",
+        "observacao": "",
+        "enderecoOrigem": "rua das macaxiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -182,7 +200,7 @@
         "latitude": "-47.082.024",
         "eventos": "Alerta de temperatura",
         "dtEvento": "15/02/2020 10:22:38",
-        "sinalgsm": "Médio",
+        "sinalgsm": "medio",
         "sinalValido": "Não",
         "itvlPosicao": "15:50:00",
         "itvlPosicaoSleepAtual": "19:00:00",
@@ -194,7 +212,10 @@
         "temperatura": "100°C",
         "rfLigado": "Sim",
         "frequencia": "20.000 MHz",
-        "bateria": "83%"
+        "bateria": "83%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -210,7 +231,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Alto",
+        "sinalgsm": "alto",
         "sinalValido": "Não",
         "itvlPosicao": "02:09:00",
         "itvlPosicaoSleepAtual": "20:00:00",
@@ -222,7 +243,10 @@
         "temperatura": "19°C",
         "rfLigado": "Não",
         "frequencia": "74.000 MHz",
-        "bateria": "71%"
+        "bateria": "71%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -238,7 +262,7 @@
         "latitude": "-47.082.024",
         "eventos": "Detecção jammer",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Alto",
+        "sinalgsm": "medio",
         "sinalValido": "Sim",
         "itvlPosicao": "01:58:00",
         "itvlPosicaoSleepAtual": "23:00:00",
@@ -250,7 +274,10 @@
         "temperatura": "34°C",
         "rfLigado": "Sim",
         "frequencia": "80.000 MHz",
-        "bateria": "15%"
+        "bateria": "15%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -266,7 +293,7 @@
         "latitude": "-47.082.024",
         "eventos": "Alerta de temperatura",
         "dtEvento": "01/02/2020 10:22:38",
-        "sinalgsm": "Baixo",
+        "sinalgsm": "baixo",
         "sinalValido": "Sim",
         "itvlPosicao": "22:18:00",
         "itvlPosicaoSleepAtual": "12:00:00",
@@ -278,7 +305,10 @@
         "temperatura": "62°C",
         "rfLigado": "Sim",
         "frequencia": "41.000 MHz",
-        "bateria": "100%"
+        "bateria": "100%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "rua indaiatuba"
     },
     {
         "dispositivoid": "15",
@@ -294,7 +324,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Médio",
+        "sinalgsm": "alto",
         "sinalValido": "Não",
         "itvlPosicao": "04:15:00",
         "itvlPosicaoSleepAtual": "21:00:00",
@@ -306,7 +336,10 @@
         "temperatura": "49°C",
         "rfLigado": "Sim",
         "frequencia": "87.000 MHz",
-        "bateria": "100%"
+        "bateria": "100%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -322,7 +355,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "30/02/2020 10:22:38",
-        "sinalgsm": "Alto",
+        "sinalgsm": "medio",
         "sinalValido": "Sim",
         "itvlPosicao": "23:20:00",
         "itvlPosicaoSleepAtual": "10:00:00",
@@ -334,7 +367,10 @@
         "temperatura": "39°C",
         "rfLigado": "Não",
         "frequencia": "789.000 MHz",
-        "bateria": "74%"
+        "bateria": "74%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -350,7 +386,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Médio",
+        "sinalgsm": "baixo",
         "sinalValido": "Não",
         "itvlPosicao": "24:10:00",
         "itvlPosicaoSleepAtual": "23:00:00",
@@ -362,7 +398,10 @@
         "temperatura": "10°C",
         "rfLigado": "Não",
         "frequencia": "100.000 MHz",
-        "bateria": "50%"
+        "bateria": "50%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -378,7 +417,7 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "20/02/2020 10:22:38",
-        "sinalgsm": "Alto",
+        "sinalgsm": "alto",
         "sinalValido": "Não",
         "itvlPosicao": "12:50:00",
         "itvlPosicaoSleepAtual": "12:00:00",
@@ -390,7 +429,10 @@
         "temperatura": "67°C",
         "rfLigado": "Sim",
         "frequencia": "320.000 MHz",
-        "bateria": "99%"
+        "bateria": "99%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     },
     {
         "dispositivoid": "15",
@@ -406,7 +448,7 @@
         "latitude": "-47.082.024",
         "eventos": "Detecção de corte de antena GPS",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "Baixo",
+        "sinalgsm": "medio",
         "sinalValido": "Não",
         "itvlPosicao": "19:02:00",
         "itvlPosicaoSleepAtual": "12:00:00",
@@ -418,7 +460,10 @@
         "temperatura": "91°C",
         "rfLigado": "Não",
         "frequencia": "90.000 MHz",
-        "bateria": "80%"
+        "bateria": "80%",
+        "observacao": "",
+        "enderecoOrigem": "rua das palmeiras 103",
+        "enderecoDestino": "Largo sao francisco"
     }];
     const dataBackup = data;
 
@@ -457,15 +502,19 @@
         const itvlPosicaoSleepAnterior = v.itvlPosicaoSleepAnterior;
         const tipoIsca = v.tipoIsca;
         const dadosLBS = v.dadosLBS;
-        const signal = v.sinalgsm;
+        const sinalgsm = v.sinalgsm;
         const dtExpiracao = v.dtExpiracao;
         const diasExpiracao = v.diasExpiracao;
         const rfLigado = v.rfLigado;
+        const observacao = v.observacao;
+        const enderecoOrigem = v.enderecoOrigem;
+        const enderecoDestino = v.enderecoDestino;
         var statusAcoesMap = "";
         var statusAcoesComando = "";
         var statusAcoesDash = "";
         var statusType = "";
         var statusColor = "";
+        var sinalGsmIcon = "";
     
         switch(v.status[0]){
             case '1':
@@ -490,15 +539,26 @@
                 break;  
         };
         
-            if(acoes[0] = 1){
-                statusAcoesMap = "<a style='padding: inherit;'><i class='map marker alternate large icon'></i></a>"
-            };
-            if(acoes[1] = 1){
-                statusAcoesComando = "<a style='padding: inherit;'><i class='bullseye large icon'></i></a>"
-            };
-            if(acoes[2] = 1){
-                statusAcoesDash = "<a style='padding: inherit;'><i class='chart pie large icon'></i></a>"
-            };
+        if(acoes[0] = 1){
+            statusAcoesMap = "<a style='padding: inherit;'><i class='map marker alternate large icon'></i></a>"
+        };
+        if(acoes[1] = 1){
+            statusAcoesComando = "<a style='padding: inherit;'><i class='bullseye large icon'></i></a>"
+        };
+        if(acoes[2] = 1){
+            statusAcoesDash = "<a style='padding: inherit;'><i class='chart pie large icon'></i></a>"
+        };
+        
+        if(sinalgsm == "baixo"){
+                sinalGsmIcon = "<img name='baixo' style='width:19px;' src='https://cache.1gps.com.br/system/img/icons/signal_bars_1'>"
+        }
+        if(sinalgsm == "medio"){
+                sinalGsmIcon = "<img name='medio' style='width:19px;' src='https://cache.1gps.com.br/system/img/icons/signal_bars_3'>"
+        }
+        if(sinalgsm == "alto"){
+                sinalGsmIcon = "<img name='alto' style='width:19px;' src='https://cache.1gps.com.br/system/img/icons/signal_bars_5'>"
+
+        };
         
             $('#tabela_criada tbody').append(
             '<tr><td class="display-flex " name="status" draggable="true" scope="col"><div style="flex-direction: column;margin-left: 20px;">'
@@ -521,13 +581,16 @@
             + '<td class="centered-text " name="itvlPosicaoSleepAnterior" draggable="true" scope="col">' + itvlPosicaoSleepAnterior + '</td>'
             + '<td class="centered-text " name="tipoIsca" draggable="true" scope="col">' + tipoIsca + '</td>'
             + '<td class="centered-text colLBS" name="dadosLBS" draggable="true" scope="col">' + dadosLBS + '</td>'
-            + '<td class="centered-text " draggable="true" name="sinalgsm" scope="col">' + signal + '</td>'
+            + '<td class="centered-text " draggable="true" name="sinalgsm" scope="col">' + sinalGsmIcon + '</td>'
             + '<td class="centered-text " draggable="true" name="dtExpiracao" scope="col">' + dtExpiracao + '</td>'
             + '<td class="centered-text " draggable="true" name="diasExpiracao" scope="col">' + diasExpiracao + '</td>'
             + '<td class="centered-text " name="temperatura" draggable="true" scope="col">' + temperatura + '</td>'
             + '<td class="centered-text " name="rfLigado" draggable="true" scope="col">' + rfLigado + '</td>'
             + '<td class="centered-text " name="frequencia" draggable="true" scope="col">' + frequencia + '</td>'
-            + '<td class="centered-text " name="bateria" draggable="true" scope="col">' + bateria + '</td></tr>'
+            + '<td class="centered-text " name="bateria" draggable="true" scope="col">' + bateria + '</td>'
+            + '<td class="centered-text" name="observacao" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><a class="edit-icon"><i class="edit large icon"></i></a><span>' + observacao + '</span></td>'
+            + '<td class="centered-text" name="enderecoOrigem" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><a class="edit-icon"><i class="edit large icon"></i></a><span>' + enderecoOrigem + '</span></td>'
+            + '<td class="centered-text" name="enderecoDestino" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><a class="edit-icon"><i class="edit large icon"></i></a><span>' + enderecoDestino + '</span></td></tr>'
             );
         });
     }
@@ -795,7 +858,6 @@ RfLigado.forEach(signal =>{
                     return dado[coluna];
                 }
             });
-              debugger
             if(valor.length != 0){
                 if(filtrados.length == 0){
                     data = [];
@@ -1051,7 +1113,7 @@ RfLigado.forEach(signal =>{
                 document.querySelectorAll("tbody td[name ="+column+"]").forEach(i =>{
                     i.classList.add("d-none");
                 })
-                document.querySelector("#clear_checkbox input").checked = false;
+                document.querySelector("#clear_checkbox").checked = false;
             }
             else{
                 if(document.querySelector("thead #header_"+column).classList.contains("d-none")){
@@ -1066,7 +1128,6 @@ RfLigado.forEach(signal =>{
 
     //Função para limpar checkBox que ocultam colunas
     function limpaCheckBoxOcultaColunas(){
-
         for(var i = 0; i < allCheckboxColumns.length; i++){
             if(allCheckboxColumns[i].firstChild.checked == true){
                 allCheckboxColumns[i].firstChild.checked = false
@@ -1092,6 +1153,29 @@ RfLigado.forEach(signal =>{
           }
     })
 
+    // $(function(){
+    //     var popup = $("#header_sinalgsm .ui.checkbox");
+    //     var id_coluna;
+    //     table = document.getElementById("tabela_criada");
+    //     var filtrados = [];
+    //     rows = table.rows;
+    //     for(i = 0; i< allHeaders.length; i++){
+    //         if(allHeaders[i].getAttribute("id") == "header_sinalgsm"){
+    //             id_coluna = i;
+    //         }    
+    //     }
+    //       for (i = 1; i < (rows.length - 1); i++) {
+    //         x = rows[i].getElementsByTagName("TD")[id_coluna];
+    //         filtrados = filtrados.concat(x.firstChild.getAttribute("name"))
+    //         filtrados = [ ...new Set( filtrados ) ];
+    //       }
+    //       for (i = 0; i < popup.length; i++) {
+    //         var sub = filtrados[i];
+    //         popup[i].lastChild.innerHTML = sub;
+    //       }
+
+    // })
+
     function scrollToSection() {
         let section = $("#tabela_criada th");
         for(var i =0; i< section.length; i++){
@@ -1105,4 +1189,5 @@ RfLigado.forEach(signal =>{
             block: 'start',
             });
       }
+
       
