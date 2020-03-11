@@ -67,6 +67,9 @@
         table tbody tr td {
             width: 300px !important;
         }
+        table tbody tr td:hover{
+            cursor: default;
+        }
         .colLBS{
             min-width: 490px !important;
         }
@@ -106,12 +109,22 @@
         .table tr th{
             text-align: center !important;
         }
+        i.check.circle.icon:hover{
+            color: white !important;
+        }
+        i.exclamation.triangle.icon:hover{
+            color: white !important;
+        }
+        i.times.circle.icon:hover{
+            color: white !important;
+        }
         i.map.marker.alternate{
             color: #d60101 !important;
         }
         i.map.marker.alternate:hover{
             color: #d60101 !important;
             transform: scale(1.2) !important;
+            cursor: pointer;
         }
         i.chart.pie{
             color: #ffbf06 !important;
@@ -119,6 +132,7 @@
         i.chart.pie:hover{
             color: #ffbf06 !important;
             transform: scale(1.2) !important;
+            cursor: pointer;
         }
         i.bullseye{
             color: #0f0fbd !important;
@@ -126,6 +140,7 @@
         i.bullseye:hover{
             color: #0f0fbd !important;
             transform: scale(1.2) !important;
+            cursor: pointer;
         }
         .icon{
             color: #b7b7b8;
@@ -140,6 +155,9 @@
             padding-top: 0;
             padding-right: 0;
             padding-bottom: 3px;        
+        }
+        .wide.column.bg-green, .wide.column.bg-blue, .wide.column.bg-orange{
+            cursor: default !important;
         }
         .d-none{
             display: none !important;
@@ -177,6 +195,9 @@
         }
         .bold-font{
             font-weight: bold;
+        }
+        .display-flex{
+            display: flex;
         }
         .centered-text{
             text-align: center !important;
@@ -218,6 +239,7 @@
         #btn_return:hover, i.edit:hover{
             transform: scale(1.2);
             transition: .3s;
+            cursor: pointer;
         }
         #btn_return i:hover{
             color: white !important;
@@ -227,6 +249,18 @@
 
         @media(max-width: 767px){
             .ui.grid.centered{
-                margin-bottom: 15rem !important;
+                margin-bottom: 17rem !important
             }
+        }
+
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(https://cache.1gps.com.br/img/icons/newLoading.gif) center no-repeat #fff;
         }

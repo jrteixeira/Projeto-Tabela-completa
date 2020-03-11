@@ -1,11 +1,17 @@
 
+    window.addEventListener("load", function(){
+        $(".se-pre-con").fadeOut("slow");;
+    })
 
     let data = [{
         "dispositivoid": "15",
-        "status": "1",
+        "statusIsca": "1",
+        "statusViagem": "1",
+        "alertaFunc": "1, 1, 1, 1, 1, 1, 1, 1",
         "acoes": "1, 1, 1",    
         "serial": "458652",
         "placa": "ABC1238",
+        "proprietario": "Omega",
         "grupoVeiculo": "Fenando de Noronha , Triade , Vintage",
         "dtComunicacao": "12/02/2020 10:22:38",
         "dtPosicao": "09/12/2019 10:22:38",
@@ -14,13 +20,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "12:00:00",
         "itvlPosicaoSleepAtual": "12:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "TIM",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "13",
         "temperatura": "10°C",
@@ -33,10 +41,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "2",
+        "statusIsca": "2",
+        "statusViagem": "1",
+        "alertaFunc": "1, 1, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "754632",
         "placa": "ASD0989",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "Fenando de Noronha , Triade",
         "dtComunicacao": "21/02/2020 10:22:38",
         "dtPosicao": "07/02/2020 10:22:38",
@@ -45,13 +56,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "medio",
         "sinalValido": "Não",
         "itvlPosicao": "13:00:00",
         "itvlPosicaoSleepAtual": "13:00:00",
         "itvlPosicaoSleepAnterior": "13:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "VIVO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "medio",
+        "tipoSinal": "GPRS",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "01",
         "temperatura": "55°C",
@@ -64,10 +77,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "1",
+        "statusIsca": "1",
+        "statusViagem": "2",
+        "alertaFunc": "1, 1, 1, 1, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "021358",
         "placa": "TLK1234",
+        "proprietario": "Multi portal rastreamento",
         "grupoVeiculo": "Fenando de Noronha",
         "dtComunicacao": "20/02/2020 10:22:38",
         "dtPosicao": "05/02/2020 10:22:38",
@@ -76,13 +92,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "1:00:00",
         "itvlPosicaoSleepAtual": "14:00:00",
         "itvlPosicaoSleepAnterior": "20:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "CLARO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "15",
         "temperatura": "14°C",
@@ -95,10 +113,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "1",
+        "statusIsca": "1",
+        "statusViagem": "1",
+        "alertaFunc": "2, 3, 2, 3, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "112530",
         "placa": "MAN1145",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "Triade",
         "dtComunicacao": "01/02/2020 10:22:38",
         "dtPosicao": "16/02/2020 10:22:38",
@@ -107,13 +128,15 @@
         "latitude": "-47.082.024",
         "eventos": "Alerta de temperatura",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "09:00:00",
         "itvlPosicaoSleepAtual": "16:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "TIM",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "46",
         "temperatura": "19°C",
@@ -126,10 +149,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "3",
+        "statusIsca": "2",
+        "statusViagem": "3",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "784652",
         "placa": "FGR4562",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "Vintage",
         "dtComunicacao": "15/02/2020 10:22:38",
         "dtPosicao": "28/02/2020 10:22:38",
@@ -138,13 +164,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "baixo",
         "sinalValido": "Não",
         "itvlPosicao": "11:30:00",
         "itvlPosicaoSleepAtual": "17:00:00",
         "itvlPosicaoSleepAnterior": "22:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "TIM",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "baixo",
+        "tipoSinal": "GPRS",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "0",
         "temperatura": "23°C",
@@ -157,10 +185,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "5",
+        "statusIsca": "1",
+        "statusViagem": "3",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "002356",
         "placa": "GST7851",
+        "proprietario": "Desenvolvimento",
         "grupoVeiculo": "Teste Multi portal",
         "dtComunicacao": "05/02/2020 10:22:38",
         "dtPosicao": "02/03/2020 10:22:38",
@@ -169,13 +200,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Sim",
         "itvlPosicao": "18:22:00",
         "itvlPosicaoSleepAtual": "18:00:00",
         "itvlPosicaoSleepAnterior": "13:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "CLARO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "62",
         "temperatura": "87°C",
@@ -188,10 +221,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "2",
+        "statusIsca": "2",
+        "statusViagem": "1",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "878965",
         "placa": "DSP2121",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "JowJow",
         "dtComunicacao": "28/02/2020 10:22:38",
         "dtPosicao": "04/03/2020 10:22:38",
@@ -200,13 +236,15 @@
         "latitude": "-47.082.024",
         "eventos": "Alerta de temperatura",
         "dtEvento": "15/02/2020 10:22:38",
-        "sinalgsm": "medio",
         "sinalValido": "Não",
         "itvlPosicao": "15:50:00",
         "itvlPosicaoSleepAtual": "19:00:00",
         "itvlPosicaoSleepAnterior": "15:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "VIVO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "medio",
+        "tipoSinal": "GPRS",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "25",
         "temperatura": "100°C",
@@ -219,10 +257,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "1",
+        "statusIsca": "1",
+        "statusViagem": "2",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "526435",
         "placa": "FGB8752",
+        "proprietario": "Carlos manoel",
         "grupoVeiculo": "Sascar monitoramento",
         "dtComunicacao": "19/02/2020 07:22:38",
         "dtPosicao": "22/01/2020 10:22:38",
@@ -231,13 +272,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Não",
         "itvlPosicao": "02:09:00",
         "itvlPosicaoSleepAtual": "20:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "TIM",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "LORAWAN",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "25",
         "temperatura": "19°C",
@@ -250,10 +293,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "4",
+        "statusIsca": "2",
+        "statusViagem": "3",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "774856",
         "placa": "VSN9090",
+        "proprietario": "pietra macedo",
         "grupoVeiculo": "Sascar teste",
         "dtComunicacao": "19/02/2020 10:22:38",
         "dtPosicao": "11/01/2020 10:22:38",
@@ -262,13 +308,15 @@
         "latitude": "-47.082.024",
         "eventos": "Detecção jammer",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "medio",
         "sinalValido": "Sim",
         "itvlPosicao": "01:58:00",
         "itvlPosicaoSleepAtual": "23:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "CLARO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "medio",
+        "tipoSinal": "GPRS",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "3",
         "temperatura": "34°C",
@@ -281,10 +329,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "3",
+        "statusIsca": "2",
+        "statusViagem": "1",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "032567",
         "placa": "ASD5246",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "teste do teste",
         "dtComunicacao": "19/02/2020 09:22:38",
         "dtPosicao": "14/01/2020 10:22:38",
@@ -293,13 +344,15 @@
         "latitude": "-47.082.024",
         "eventos": "Alerta de temperatura",
         "dtEvento": "01/02/2020 10:22:38",
-        "sinalgsm": "baixo",
         "sinalValido": "Sim",
         "itvlPosicao": "22:18:00",
         "itvlPosicaoSleepAtual": "12:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "VIVO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "baixo",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "42",
         "temperatura": "62°C",
@@ -312,10 +365,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "1",
+        "statusIsca": "1",
+        "statusViagem": "1",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "965311",
         "placa": "FSD5555",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "Comboio atomico",
         "dtComunicacao": "13/02/2020 10:22:38",
         "dtPosicao": "11/01/2020 10:22:38",
@@ -324,13 +380,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Não",
         "itvlPosicao": "04:15:00",
         "itvlPosicaoSleepAtual": "21:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "VIVO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "25",
         "temperatura": "49°C",
@@ -343,10 +401,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "4",
+        "statusIsca": "2",
+        "statusViagem": "2",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "665245",
         "placa": "BDC7586",
+        "proprietario": "Teste proprietario",
         "grupoVeiculo": "Sao roque",
         "dtComunicacao": "29/01/2020 10:22:38",
         "dtPosicao": "11/02/2020 10:22:38",
@@ -355,13 +416,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "30/02/2020 10:22:38",
-        "sinalgsm": "medio",
         "sinalValido": "Sim",
         "itvlPosicao": "23:20:00",
         "itvlPosicaoSleepAtual": "10:00:00",
         "itvlPosicaoSleepAnterior": "23:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "VIVO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "medio",
+        "tipoSinal": "GPRS",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "44",
         "temperatura": "39°C",
@@ -374,10 +437,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "1",
+        "statusIsca": "1",
+        "statusViagem": "3",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "621523",
         "placa": "HSG8512",
+        "proprietario": "Macaxiba",
         "grupoVeiculo": "Bahia, americana",
         "dtComunicacao": "20/01/2020 10:22:38",
         "dtPosicao": "01/02/2020 10:22:38",
@@ -386,13 +452,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição em sleep",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "baixo",
         "sinalValido": "Não",
         "itvlPosicao": "24:10:00",
         "itvlPosicaoSleepAtual": "23:00:00",
         "itvlPosicaoSleepAnterior": "12:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "CLARO",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "baixo",
+        "tipoSinal": "RF",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "25",
         "temperatura": "10°C",
@@ -405,10 +473,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "2",
+        "statusIsca": "2",
+        "statusViagem": "1",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "412458",
         "placa": "TRL2356",
+        "proprietario": "Grupo Sascar",
         "grupoVeiculo": "São roque, São paulo",
         "dtComunicacao": "30/12/2019 10:22:38",
         "dtPosicao": "10/02/2020 10:22:38",
@@ -417,13 +488,15 @@
         "latitude": "-47.082.024",
         "eventos": "posição",
         "dtEvento": "20/02/2020 10:22:38",
-        "sinalgsm": "alto",
         "sinalValido": "Não",
         "itvlPosicao": "12:50:00",
         "itvlPosicaoSleepAtual": "12:00:00",
         "itvlPosicaoSleepAnterior": "21:00:00",
         "tipoIsca": "descartavel",
+        "operadora": "TIM",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "alto",
+        "tipoSinal": "GPRS",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "72",
         "temperatura": "67°C",
@@ -436,10 +509,13 @@
     },
     {
         "dispositivoid": "15",
-        "status": "2",
+        "statusIsca": "2",
+        "statusViagem": "2",
+        "alertaFunc": "2, 3, 1, 2, 1, 2, 2, 2",
         "acoes": "1, 1, 1",  
         "serial": "325986",
         "placa": "UBS1010",
+        "proprietario": "São pedro motoristas",
         "grupoVeiculo": "Fenando de Noronha , Triade",
         "dtComunicacao": "05/11/2019 10:22:38",
         "dtPosicao": "21/02/2020 10:22:38",
@@ -448,13 +524,15 @@
         "latitude": "-47.082.024",
         "eventos": "Detecção de corte de antena GPS",
         "dtEvento": "12/02/2020 10:22:38",
-        "sinalgsm": "medio",
         "sinalValido": "Não",
         "itvlPosicao": "19:02:00",
         "itvlPosicaoSleepAtual": "12:00:00",
         "itvlPosicaoSleepAnterior": "02:00:00",
         "tipoIsca": "retornavel",
+        "operadora": "TIM",
         "dadosLBS": "ERB 01 = MNC 6 BSIC 41 RSL -75 MCC 724 LAC 1962 CID 1061 TA 255, ERB 02 = MNC 6 BSIC 18 RSL -89 MCC 724 LAC 1962 CID 1063 TA 255, ERB 03 = MNC 6 BSIC 15 RSL -97 MCC 724 LAC 1962 CID 1062 TA 255, ERB 04 = MNC 6 BSIC 46 RSL -100 MCC 724 LAC 1862 CID 3421 TA 255, ERB 05 = MNC 6 BSIC 43 RSL -102 MCC 724 LAC 1962 CID 2213 TA 255",
+        "sinalgsm": "medio",
+        "tipoSinal": "LORAWAN",
         "dtExpiracao": "29/01/2020",
         "diasExpiracao": "11",
         "temperatura": "91°C",
@@ -466,25 +544,27 @@
         "enderecoDestino": "Largo sao francisco"
     }];
     const dataBackup = data;
-
     // Função que popula a tabela
     function populaTabela(){
+        
         var tableBody = document.querySelector("tbody");
         while(tableBody.hasChildNodes())
             {
                 tableBody.removeChild(tableBody.firstChild);
             }
         data.forEach(v => {
-        const plate = v.placa;
         const events = v.eventos;
+        const plate = v.placa;
+        const proprietario = v.proprietario;
         const validSignal = v.sinalValido;
+        let alertaFunc = v.alertaFunc;
+        const acoes = v.acoes;
         const dt_comunication = v.dtComunicacao;
         const dt_position = v.dtPosicao;
         const itvl_posicao = v.itvlPosicao;
         const bateria = v.bateria;
         const frequencia = v.frequencia;
         const temperatura = v.temperatura;
-        const acoes = v.acoes;
         const serial = v.serial;
         const grupoVeiculo = v.grupoVeiculo;
         const enderecoPosicao = v.enderecoPosicao;
@@ -494,8 +574,10 @@
         const itvlPosicaoSleepAtual = v.itvlPosicaoSleepAtual;
         const itvlPosicaoSleepAnterior = v.itvlPosicaoSleepAnterior;
         const tipoIsca = v.tipoIsca;
+        const operadora = v.operadora;
         const dadosLBS = v.dadosLBS;
         const sinalgsm = v.sinalgsm;
+        const tipoSinal = v.tipoSinal;
         const dtExpiracao = v.dtExpiracao;
         const diasExpiracao = v.diasExpiracao;
         const rfLigado = v.rfLigado;
@@ -505,33 +587,50 @@
         var statusAcoesMap = "";
         var statusAcoesComando = "";
         var statusAcoesDash = "";
-        var statusType = "";
-        var statusColor = "";
+        var statusIscaType = "";
+        var statusIscaColor = "";
+        var statusViagemType = "";
         var sinalGsmIcon = "";
+
     
-        switch(v.status[0]){
+        // Laço para preencher coluna de status isca
+        switch(v.statusIsca){
             case '1':
-                statusType = "Ativadas"
-                statusColor = "green-color"
+                statusIscaType = "Ativadas"
+                statusIscaColor = "green-color"
                 break;
             case '2':
-                statusType = "Aguardando ativação"
-                statusColor = "blue-color"
-                break;
-            case '3':
-                statusType = "Em viagem"
-                statusColor = "orange-color"
-                break;
-            case '4':
-                statusType = "Fim de Viagem"
-                statusColor = "yellow-color"
+                statusIscaType = "Aguardando ativação"
+                statusIscaColor = "blue-color"
                 break; 
-            case '5':
-                statusType = "Fora de Operação"
-                statusColor = "red-color"
+        };
+        // Laço para preencher coluna de status viagem
+        switch(v.statusViagem){
+            case '1':
+                statusViagemType = "Em viagem"
+                break;
+            case '2':
+                statusViagemType = "Fim de Viagem"
+                break; 
+            case '3':
+                statusViagemType = "Fora de Operação"
                 break;  
         };
-        
+        // Laço para preencher coluna de status isca
+        alertaFunc = alertaFunc.split(", ")
+        for(var i=0; i < alertaFunc.length; i++){
+            if(alertaFunc[i] == 1){
+                window["alerta"+i] = "green";
+            }
+            else if(alertaFunc[i] == 2){
+                 window["alerta"+i] = "red";
+            }
+            else{
+                 window["alerta"+i] = "";
+            }
+            console.log("alerta"+i)
+        };
+
         if(acoes[0] = 1){
             statusAcoesMap = "<a style='padding: inherit;' data-tooltip='Exibir mapa'><i class='map marker alternate large icon'></i></a>"
         };
@@ -554,47 +653,71 @@
         };
         
             $('#tabela_criada tbody').append(
-            '<tr><td class="display-flex " name="status" draggable="true" scope="col"><div style="flex-direction: column;margin-left: 20px;">'
-            +'<i class="circle '+ statusColor +' icon"></i><span>' + statusType + '</span>' + '</div></td>'
-            + '<td class="centered-text  " name="acoes" draggable="true" scope="col">'
-            + statusAcoesMap + statusAcoesComando + statusAcoesDash +'</td>'
-            + '<td class="centered-text " name="serial" draggable="true" scope="col">' + serial + '</td>'
-            + '<td class="centered-text " name="placa" draggable="true" scope="col">' + plate + '</td>'
-            + '<td class="centered-text " name="grupoVeiculo" draggable="true" scope="col">' + grupoVeiculo + '</td>'
-            + '<td class="centered-text " name="dtComunicacao" draggable="true" scope="col">' + dt_comunication + '</td>'
-            + '<td class="centered-text " name="dtPosicao" draggable="true" scope="col">' + dt_position + '</td>'
-            + '<td class="centered-text " name="enderecoPosicao" draggable="true" scope="col">' + enderecoPosicao + '</td>'
-            + '<td class="centered-text " name="longitude" draggable="true" scope="col">' + longitude + '</td>'
-            + '<td class="centered-text " name="latitude" draggable="true" scope="col">' + latitude + '</td>'
-            + '<td class="" draggable="true" name="eventos" scope="col">' + events + '</td>'
-            + '<td class="centered-text " name="dtEvento" draggable="true" scope="col">' + dtEvento + '</td>'
-            + '<td class="centered-text " name="sinalValido" draggable="true" scope="col">' + validSignal + '</td>'
-            + '<td class="centered-text " name="itvlPosicao" draggable="true" scope="col">' + itvl_posicao + '</td>'
-            + '<td class="centered-text " name="itvlPosicaoSleepAtual" draggable="true" scope="col">' + itvlPosicaoSleepAtual + '</td>'
-            + '<td class="centered-text " name="itvlPosicaoSleepAnterior" draggable="true" scope="col">' + itvlPosicaoSleepAnterior + '</td>'
-            + '<td class="centered-text " name="tipoIsca" draggable="true" scope="col">' + tipoIsca + '</td>'
-            + '<td class="centered-text colLBS" name="dadosLBS" draggable="true" scope="col">' + dadosLBS + '</td>'
-            + '<td class="centered-text " draggable="true" name="sinalgsm" scope="col">' + sinalGsmIcon + '</td>'
-            + '<td class="centered-text " draggable="true" name="dtExpiracao" scope="col">' + dtExpiracao + '</td>'
-            + '<td class="centered-text " draggable="true" name="diasExpiracao" scope="col">' + diasExpiracao + '</td>'
-            + '<td class="centered-text " name="temperatura" draggable="true" scope="col">' + temperatura + '</td>'
-            + '<td class="centered-text " name="rfLigado" draggable="true" scope="col">' + rfLigado + '</td>'
-            + '<td class="centered-text " name="frequencia" draggable="true" scope="col">' + frequencia + '</td>'
-            + '<td class="centered-text " name="bateria" draggable="true" scope="col">' + bateria + '</td>'
-            + '<td class="centered-text" name="observacao" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + observacao + '</span></td>'
-            + '<td class="centered-text" name="enderecoOrigem" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + enderecoOrigem + '</span></td>'
-            + '<td class="centered-text" name="enderecoDestino" draggable="true" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + enderecoDestino + '</span></td></tr>'
+            '<tr><td name="statusIsca" scope="col"><div style="flex-direction: column;margin-left: 20px;">'
+            +'<i class="circle '+ statusIscaColor +' icon"></i><span>' + statusIscaType + '</span>' + '</div></td>'
+            + '<td class="centered-text" name="statusViagem" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + statusViagemType + '</span></td>'
+            +'<td name="alertaFunc" scope="col"><div class="display-flex centered-text">'
+            +'<div style="margin-left: 20px;"><span>Falha de comunicação</span><i data-alert-func class="circle ' + window["alerta"+0] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>Faixa temperatura</span><i data-alert-func class="circle ' + window["alerta"+1] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>Nivel bateria</span><i data-alert-func class="circle ' + window["alerta"+2] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>RF ligado</span><i data-alert-func class="circle ' + window["alerta"+3] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>Tempo expiração</span><i data-alert-func class="circle ' + window["alerta"+4] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>Ciclo isca</span><i data-alert-func class="circle ' + window["alerta"+5] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>Modo recuperação</span><i data-alert-func class="circle ' + window["alerta"+6] + ' icon" style="margin-top: 5px;"></i></div>'
+            +'<div style="margin-left: 20px;"><span>Modo emergência</span><i data-alert-func class="circle ' + window["alerta"+7] + ' icon" style="margin-top: 5px;"></i></div></div></td>'
+            + '<td class="centered-text  " name="acoes" scope="col">' + statusAcoesMap + statusAcoesComando + statusAcoesDash +'</td>'
+            + '<td class="centered-text " name="serial" scope="col">' + serial + '</td>'
+            + '<td class="centered-text " name="placa" scope="col">' + plate + '</td>'
+            + '<td class="centered-text" name="proprietario" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + proprietario + '</span></td>'
+            + '<td class="centered-text " name="grupoVeiculo" scope="col">' + grupoVeiculo + '</td>'
+            + '<td class="centered-text " name="dtComunicacao" scope="col">' + dt_comunication + '</td>'
+            + '<td class="centered-text " name="dtPosicao" scope="col">' + dt_position + '</td>'
+            + '<td class="centered-text " name="enderecoPosicao" scope="col">' + enderecoPosicao + '</td>'
+            + '<td class="centered-text " name="longitude" scope="col">' + longitude + '</td>'
+            + '<td class="centered-text " name="latitude" scope="col">' + latitude + '</td>'
+            + '<td class="" name="eventos" scope="col">' + events + '</td>'
+            + '<td class="centered-text " name="dtEvento" scope="col">' + dtEvento + '</td>'
+            + '<td class="centered-text " name="sinalValido" scope="col">' + validSignal + '</td>'
+            + '<td class="centered-text " name="itvlPosicao" scope="col">' + itvl_posicao + '</td>'
+            + '<td class="centered-text " name="itvlPosicaoSleepAtual" scope="col">' + itvlPosicaoSleepAtual + '</td>'
+            + '<td class="centered-text " name="itvlPosicaoSleepAnterior" scope="col">' + itvlPosicaoSleepAnterior + '</td>'
+            + '<td class="centered-text " name="tipoIsca" scope="col">' + tipoIsca + '</td>'
+            + '<td class="centered-text " name="operadora" scope="col">' + operadora + '</td>'
+            + '<td class="centered-text colLBS" name="dadosLBS" scope="col">' + dadosLBS + '</td>'
+            + '<td class="centered-text " name="sinalgsm" scope="col">' + sinalGsmIcon + '</td>'
+            + '<td class="centered-text " name="tipoSinal" scope="col">' + tipoSinal + '</td>'
+            + '<td class="centered-text " name="dtExpiracao" scope="col">' + dtExpiracao + '</td>'
+            + '<td class="centered-text " name="diasExpiracao" scope="col">' + diasExpiracao + '</td>'
+            + '<td class="centered-text " name="temperatura" scope="col">' + temperatura + '</td>'
+            + '<td class="centered-text " name="rfLigado" scope="col">' + rfLigado + '</td>'
+            + '<td class="centered-text " name="frequencia" scope="col">' + frequencia + '</td>'
+            + '<td class="centered-text " name="bateria" scope="col">' + bateria + '</td>'
+            + '<td class="centered-text" name="observacao" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + observacao + '</span></td>'
+            + '<td class="centered-text" name="enderecoOrigem" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + enderecoOrigem + '</span></td>'
+            + '<td class="centered-text" name="enderecoDestino" scope="col" style="padding-top: 5px;padding-right: 0px;"><div class="edit-icon"><a data-tooltip="Editar registro" data-position="top right"><i class="edit large icon"></i></a></div><span>' + enderecoDestino + '</span></td></tr>'
             );
         });
     }
 
+
+
     // Populando filtro de status
-    let Status = data.map(variavel => {
-            return  variavel.status;
+    let StatusIsca = data.map(variavel => {
+            return  variavel.statusIsca;
     });
-    Status = [ ...new Set( Status ) ];
-    Status.forEach(eve =>{
-        $('#header_status .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_status_'+eve+'" name="'+eve+'"><label>'+eve+'</label></div>');
+    StatusIsca = [ ...new Set( StatusIsca ) ];
+    StatusIsca.forEach(eve =>{
+        $('#header_statusIsca .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_statusIsca_'+eve+'" name="'+eve+'"><label>'+eve+'</label></div>');
+    });
+    //
+
+    // Populando filtro de status
+    let StatusViagem = data.map(variavel => {
+        return  variavel.statusViagem;
+    });
+    StatusViagem = [ ...new Set( StatusViagem ) ];
+    StatusViagem.forEach(eve =>{
+        $('#header_statusViagem .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_statusViagem_'+eve+'" name="'+eve+'"><label>'+eve+'</label></div>');
     });
     //
 
@@ -628,6 +751,15 @@
         $('#header_sinalgsm .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_sinalgsm_'+signal+'" name="'+signal+'"><label>'+signal+'</label></div>');
     });
 
+    // Populando filtro de Nivel de sinal GMS
+    let TipoSinal = data.map(variavel => {
+    return  variavel.tipoSinal;
+    });
+    TipoSinal = [ ...new Set( TipoSinal ) ];
+    TipoSinal.forEach(signal =>{
+        $('#header_tipoSinal .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_tipoSinal_'+signal+'" name="'+signal+'"><label>'+signal+'</label></div>');
+    });
+
     // Populando filtro de sinal valido
     let SinalValido = data.map(variavel => {
             return  variavel.sinalValido;
@@ -659,21 +791,23 @@ RfLigado.forEach(signal =>{
         var ativos = 0;
         var aguardando = 0;
         var viagem = 0;
+        var total = dataBackup.length;
 
         for(var i=0;i<dataBackup.length;i++){
-            if(dataBackup[i].status == 1){
+            if(dataBackup[i].statusIsca == 1){
                 ativos = ativos + 1;
             }
-            if(dataBackup[i].status == 2){
+            if(dataBackup[i].statusIsca == 2){
                 aguardando = aguardando + 1;
             }
-            if(dataBackup[i].status == 3){
+            if(dataBackup[i].statusViagem == 3){
                 viagem = viagem + 1;
             }
         }
         document.querySelector("#ativo_id").innerHTML = ativos;
         document.querySelector("#aguardando_ativacao_id").innerHTML = aguardando;
         document.querySelector("#em_viagem_id").innerHTML = viagem;
+        document.querySelector("#total_id").innerHTML = total;
     }
 
     // Atualiza os dados da tabela
@@ -1162,15 +1296,41 @@ RfLigado.forEach(signal =>{
         ocultaColunas()
     }
 
-    //Função para popular com nomes corretos nos checkBox da coluna status
+    //Função para popular com nomes corretos nos checkBox da coluna status isca
     $(function(){
-        var popup = $("#popup_status .ui.checkbox");
+        var popup = $("#popup_statusIsca .ui.checkbox");
         table = document.getElementById("tabela_criada");
         var filtrados = [];
         rows = table.rows;
           for (i = 1; i < (rows.length - 1); i++) {
             x = rows[i].getElementsByTagName("TD")[0];
             filtrados = filtrados.concat(x.lastChild.lastChild.innerHTML)
+            filtrados = [ ...new Set( filtrados ) ];
+          }
+          for (i = 0; i < popup.length; i++) {
+            var sub = filtrados[i];
+            popup[i].lastChild.innerHTML = sub;
+          }
+    })
+
+    //Função para popular com nomes corretos nos checkBox da coluna status viagem
+    $(function(){
+        var popup = $("#popup_statusViagem .ui.checkbox");
+        table = document.getElementById("tabela_criada");
+        var filtrados = [];
+        var indice;
+        rows = table.rows;
+        for(var i = 0; i < allHeaders.length; i++){
+            var varname = allHeaders[i].getAttribute("name");
+            if(varname == "statusViagem"){
+                indice = i;
+                break
+            }
+        }
+          for (i = 1; i < (rows.length - 1); i++) {
+            x = rows[i].getElementsByTagName("TD")[indice];
+            console.log(x.lastChild.lastChild)
+            filtrados = filtrados.concat(x.lastChild.innerHTML)
             filtrados = [ ...new Set( filtrados ) ];
           }
           for (i = 0; i < popup.length; i++) {

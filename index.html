@@ -12,8 +12,12 @@
     </script>
 </head>
 <body>
+    <div class="se-pre-con"></div>
     <div class="panel-container">
-        <div class="ui grid centered" style="height: 100px; margin-bottom: 1rem;">
+        <div class="ui grid centered" style="height: 130px; margin-bottom: 1rem;">
+            <div class="sixteen wide computer column" style="text-align: center;font-size: 27px;">
+                <label id="" for="">Total de iscas: </label><label id="total_id" for=""></label>
+            </div>
             <div class="sixteen wide three wide tablet two wide computer column bg-green centered-text" style="margin: .5rem; border-radius: 5px; padding-top: 0.6rem;">
                 <i class="check circle icon large" style="color: white;"></i>
                 <span style="display: block;color: white; font-size: small; margin-bottom: 0.4rem;">Ativos</span>
@@ -32,10 +36,13 @@
         </div>
         <div id="popup_selectColumns" class="ui custom popup top left transition hidden columns">
             <div class="ui checkbox clear"><input type="checkbox" style="margin-left: 30px;margin-top: 4px;" id="clear_checkbox" onclick="limpaCheckBoxOcultaColunas()"><label for="clear_checkbox">Limpar filtros</label></div>
-            <div class="ui checkbox hide"><input type="checkbox" id="id_status" name="status" onclick=""><label for="id_status">status</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_statusIsca" name="statusIsca" onclick=""><label for="id_statusIsca">Status isca</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_statusViagem" name="statusViagem" onclick=""><label for="id_statusViagem">Status viagem</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_alertaFunc" name="alertaFunc" onclick=""><label for="id_alertaFunc">Alerta de funcionamento</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_acoes" name="acoes" onclick=""><label for="id_acoes">acoes</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_serial" name="serial" onclick=""><label for="id_serial">serial</label></div>
-            <div class="ui checkbox hide"><input type="checkbox" id="id_placa" name="placa" onclick=""><label for="id_placa">placa</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_placa" name="placa" onclick=""><label for="id_placa">Placa</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_proprietario" name="proprietario" onclick=""><label for="id_proprietario">Proprietário</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_grupoVeiculo" name="grupoVeiculo" onclick=""><label for="id_grupoVeiculo">Grupo de veiculo</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_dtComunicacao" name="dtComunicacao" onclick=""><label for="id_dtComunicacao">Data comunicação</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_dtPosicao" name="dtPosicao" onclick=""><label for="id_dtPosicao">Data posição</label></div>
@@ -49,8 +56,10 @@
             <div class="ui checkbox hide"><input type="checkbox" id="id_itvlPosicaoSleepAtual" name="itvlPosicaoSleepAtual" onclick=""><label for="id_itvlPosicaoSleepAtual">Intervalo de Posição sleep atual</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_itvlPosicaoSleepAnterior" name="itvlPosicaoSleepAnterior" onclick=""><label for="id_itvlPosicaoSleepAnterior">Intervalo de Posição sleep anterior</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_tipoIsca" name="tipoIsca" onclick=""><label for="id_tipoIsca">Tipo de Isca</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_operadora" name="operadora" onclick=""><label for="id_operadora">Operadora</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_dadosLBS" name="dadosLBS" onclick=""><label for="id_dadosLBS">Dados LBS</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_sinalgsm" name="sinalgsm" onclick=""><label for="id_sinalgsm">Nivel de sinal GSM</label></div>
+            <div class="ui checkbox hide"><input type="checkbox" id="id_tipoSinal" name="tipoSinal" onclick=""><label for="id_tipoSinal">Tipo de sinal</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_dtExpiracao" name="dtExpiracao" onclick=""><label for="id_dtExpiracao">Data de Expiração Isca</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_diasExpiracao" name="diasExpiracao" onclick=""><label for="id_diasExpiracao">Dias de Expiração Isca</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_temperatura" name="temperatura" onclick=""><label for="id_temperatura">Temperatura</label></div>
@@ -61,8 +70,7 @@
             <div class="ui checkbox hide"><input type="checkbox" id="id_enderecoOrigem" name="enderecoOrigem" onclick=""><label for="id_enderecoOrigem">Endereço de origem</label></div>
             <div class="ui checkbox hide"><input type="checkbox" id="id_enderecoDestino" name="enderecoDestino" onclick=""><label for="id_enderecoDestino">Endereço de destino</label></div>
             </div>
-            <h1 style="text-align: center; margin-bottom: 3rem;">Tabela dinamica</h1>
-            <div class="ui grid">
+            <div class="ui grid" style="margin-top: 3rem">
                 <div class="eight wide tablet  three wide computer column p-l-0">
                     <button class="ui fluid button selectColumns margin-r-1 margin-b-1">
                         <i class="eye slash outline icon" style="color: black;"></i>
@@ -86,11 +94,20 @@
         <table id="tabela_criada"  class="ui unstackable table striped celled" style="width: auto; border-top: none;">
             <thead>
                 <tr>
-                    <th id="header_status" class="max-w" name="status" draggable="true">
-                        <i class="icon search check status"></i>
-                        <label for="">Status</label>
-                        <div id="popup_status" class="ui custom popup top left transition hidden"></div>
+                    <th id="header_statusIsca" class="max-w" name="statusIsca" draggable="true">
+                        <i class="icon search check statusIsca"></i>
+                        <label for="">Status isca</label>
+                        <div id="popup_statusIsca" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_statusViagem" class="max-w" name="statusViagem" draggable="true" style="z-index: 1;">
+                        <i class="icon search check statusViagem"></i>
+                        <label for="">Status viagem</label>
+                        <div id="popup_statusViagem" class="ui custom popup top left transition hidden"></div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_alertaFunc" class="max-w" style="z-index: 1;" name="alertaFunc" draggable="true">
+                        <label for="">Alerta de funcionamento</label>
                     </th>
                     <th id="header_acoes" class="max-w" style="z-index: 1;" name="acoes" draggable="true">
                         <label for="">Ações</label>
@@ -111,6 +128,17 @@
                         <label class="p-x-1">Placa</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por placa">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_proprietario" class="max-w" name="proprietario" draggable="true" style="z-index: 1;">
+                        <i id="search_proprietario" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Proprietário</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" class="letter" placeholder="Procurar por proprietario">
                             <button class="ui icon button">
                                 <i class="reply icon"></i>
                             </button>
@@ -229,6 +257,17 @@
                         <div id="popup_tipoIsca" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
+                    <th id="header_operadora" class="max-w" name="operadora" draggable="true">
+                        <i id="search_operadora" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                        <label class="p-x-1">Operadora</label>
+                        <div class="ui action input d-none p-r-1">
+                            <input type="text" class="letter" placeholder="Procurar por operadora">
+                            <button class="ui icon button">
+                                <i class="reply icon"></i>
+                            </button>
+                        </div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
                     <th id="header_dadosLBS" class="max-w" name="dadosLBS" draggable="true">
                         <label for="">Dados LBS</label>
                     </th>
@@ -236,6 +275,12 @@
                         <i class="icon search check sinalgsm"></i>
                         <label for="">Nivel de sinal GSM</label>
                         <div id="popup_sinalgsm" class="ui custom popup top left transition hidden"></div>
+                        <i class="sort alphabet up icon"></i>
+                    </th>
+                    <th id="header_tipoSinal" class="max-w" name="tipoSinal" draggable="true">
+                        <i class="icon search check tipoSinal"></i>
+                        <label for="">Tipo de sinal</label>
+                        <div id="popup_tipoSinal" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
                     <th id="header_dtExpiracao" class="max-w" name="dtExpiracao" draggable="true">
@@ -343,10 +388,18 @@
             position : 'right center'
         })
         ;
-        // Ativação de popup status
-        $('.icon.search.check.status')
+        // Ativação de popup status isca
+        $('.icon.search.check.statusIsca')
         .popup({
-            popup : $('#popup_status'),
+            popup : $('#popup_statusIsca'),
+            on    : 'click',
+            position : 'bottom center'
+        })
+        ;
+        // Ativação de popup status viagem
+        $('.icon.search.check.statusViagem')
+        .popup({
+            popup : $('#popup_statusViagem'),
             on    : 'click',
             position : 'bottom center'
         })
@@ -371,6 +424,14 @@
         $('.icon.search.check.sinalgsm')
         .popup({
             popup : $('#popup_sinalgsm'),
+            on    : 'click',
+            position : 'bottom center'
+        })
+        ;
+        // Ativação de popup tipo de sinal
+        $('.icon.search.check.tipoSinal')
+        .popup({
+            popup : $('#popup_tipoSinal'),
             on    : 'click',
             position : 'bottom center'
         })
