@@ -597,11 +597,11 @@
         switch(v.statusIsca){
             case '1':
                 statusIscaType = "Ativadas"
-                statusIscaColor = "green-color"
+                statusIscaColor = "orange-color"
                 break;
             case '2':
                 statusIscaType = "Aguardando ativação"
-                statusIscaColor = "blue-color"
+                statusIscaColor = "green-color"
                 break; 
         };
         // Laço para preencher coluna de status viagem
@@ -628,7 +628,6 @@
             else{
                  window["alerta"+i] = "";
             }
-            console.log("alerta"+i)
         };
 
         if(acoes[0] = 1){
@@ -882,23 +881,36 @@ RfLigado.forEach(signal =>{
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
-            if(x.lastChild.lastChild){
+            if(x.lastChild.lastChild != null && x.lastChild.lastChild.innerHTML != undefined){
                 if (dir == "asc") {
                     if (x.lastChild.lastChild.innerHTML.toLowerCase() > y.lastChild.lastChild.innerHTML.toLowerCase()) {
-                      shouldSwitch= true;
-                      break;
+                    shouldSwitch = true;
+                    break;
                     }
-                  } else if (dir == "desc") {
+                }else if (dir == "desc") {
                     if (x.lastChild.lastChild.innerHTML.toLowerCase() < y.lastChild.lastChild.innerHTML.toLowerCase()) {    
-                      shouldSwitch = true;
-                      break;
+                    shouldSwitch = true;
+                    break;
                     }
-                  }
+                }
+            }
+            else if(x.lastChild != null && x.lastChild.innerHTML != undefined){
+                if (dir == "asc") {
+                    if (x.lastChild.innerHTML.toLowerCase() > y.lastChild.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.lastChild.innerHTML.toLowerCase() < y.lastChild.innerHTML.toLowerCase()) {    
+                    shouldSwitch = true;
+                    break;
+                    }
+                }
             }
             else{
                 if (dir == "asc") {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        shouldSwitch= true;
+                        shouldSwitch = true;
                         break;
                     }
                 } else if (dir == "desc") {
@@ -1329,7 +1341,6 @@ RfLigado.forEach(signal =>{
         }
           for (i = 1; i < (rows.length - 1); i++) {
             x = rows[i].getElementsByTagName("TD")[indice];
-            console.log(x.lastChild.lastChild)
             filtrados = filtrados.concat(x.lastChild.innerHTML)
             filtrados = [ ...new Set( filtrados ) ];
           }

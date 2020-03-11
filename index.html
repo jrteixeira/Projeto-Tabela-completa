@@ -14,25 +14,46 @@
 <body>
     <div class="se-pre-con"></div>
     <div class="panel-container">
-        <div class="ui grid centered" style="height: 130px; margin-bottom: 1rem;">
-            <div class="sixteen wide computer column" style="text-align: center;font-size: 27px;">
-                <label id="" for="">Total de iscas: </label><label id="total_id" for=""></label>
+        <div class="ui grid centered display-flex" style="margin-bottom: 1rem;">
+            <div class="ten wide tablet five wide computer column">
+                <div class="ui grid">
+                    <div class="sixteen wide computer column p-r-0 p-b-0" style="text-align: center;">
+                        <div class="bg-blue">
+                            <i class="hdd circle icon large white-color"></i>
+                            <label id="" class="desc-text">Total de iscas: </label>
+                            <label id="total_id" class="result-text"></label>
+                        </div>
+                    </div>
+                    <div class="eight wide computer column p-r-0">
+                        <div class="bg-orange centered-text">
+                            <i class="check circle icon large white-color"></i>
+                            <span class="desc-text">Ativos</span>
+                            <span id="ativo_id" class="result-text"></span>
+                        </div>
+                    </div>
+                    <div class="eight wide computer column p-r-0">
+                        <div class="bg-green centered-text">
+                            <i class="exclamation triangle icon large white-color"></i>
+                            <span class="desc-text">Aguardando Ativação</span>
+                            <span id="aguardando_ativacao_id" class="result-text"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="sixteen wide three wide tablet two wide computer column bg-green centered-text" style="margin: .5rem; border-radius: 5px; padding-top: 0.6rem;">
-                <i class="check circle icon large" style="color: white;"></i>
-                <span style="display: block;color: white; font-size: small; margin-bottom: 0.4rem;">Ativos</span>
-                <span id="ativo_id" style="color: white;font-weight: bold;font-size: large;"></span>
+            <div class="five wide tablet three wide computer column">
+                <div class="sixteen wide three wide tablet two wide computer column">
+                    <div class="bg-red centered-text" style="height: 100%;display: grid;">
+                        <div class="icon-panel">
+                            <i class="truck circle icon large white-color"></i>
+                        </div>
+                            <span class="desc-text">Em viagem</span>
+                            <span id="em_viagem_id" class="result-text" style="font-size: 25px;"></span>
+                    </div>
+                </div>
             </div>
-            <div class="sixteen wide three wide tablet two wide computer column bg-blue centered-text" style="margin: .5rem; border-radius: 5px; padding-top: 0.6rem;">
-                <i class="exclamation triangle icon large" style="color: white;"></i>
-                <span style="display: block;color: white; font-size: small; margin-bottom: 0.4rem;">Aguardando Ativação</span>
-                <span id="aguardando_ativacao_id" style="color: white;font-weight: bold;font-size: large;"></span>
-            </div>
-            <div class="sixteen wide three wide tablet two wide computer column bg-orange centered-text" style="margin: .5rem; border-radius: 5px; padding-top: 0.6rem;">
-                <i class="times circle icon large" style="color: white;"></i>
-                <span style="display: block;color: white; font-size: small; margin-bottom: 0.4rem;">Em viagem</span>
-                <span id="em_viagem_id" style="color: white;font-weight: bold;font-size: large;"></span>
-            </div>
+               
+            
+            
         </div>
         <div id="popup_selectColumns" class="ui custom popup top left transition hidden columns">
             <div class="ui checkbox clear"><input type="checkbox" style="margin-left: 30px;margin-top: 4px;" id="clear_checkbox" onclick="limpaCheckBoxOcultaColunas()"><label for="clear_checkbox">Limpar filtros</label></div>
@@ -83,7 +104,7 @@
                 </div>
                 <div class="eight wide two wide computer column right floated">
                     <a id="btn_return" class="ui circular blue icon button margin-b-1 right floated" data-tooltip="Voltar ao inicio" data-position="left center" onclick="scrollToSection()">
-                    <i class="reply icon large" style="color: white;"></i>
+                    <i class="reply icon large white-color"></i>
                     </a>
                 </div>
             </div>
@@ -91,29 +112,29 @@
 
     <div class="table-responsive">
         <div class="table-container">
-        <table id="tabela_criada"  class="ui unstackable table striped celled" style="width: auto; border-top: none;">
+        <table id="tabela_criada"  class="ui unstackable table striped celled">
             <thead>
                 <tr>
-                    <th id="header_statusIsca" class="max-w" name="statusIsca" draggable="true">
+                    <th id="header_statusIsca" class="max-w" name="statusIsca">
                         <i class="icon search check statusIsca"></i>
                         <label for="">Status isca</label>
                         <div id="popup_statusIsca" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_statusViagem" class="max-w" name="statusViagem" draggable="true" style="z-index: 1;">
+                    <th id="header_statusViagem" class="max-w index-1" name="statusViagem">
                         <i class="icon search check statusViagem"></i>
                         <label for="">Status viagem</label>
                         <div id="popup_statusViagem" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_alertaFunc" class="max-w" style="z-index: 1;" name="alertaFunc" draggable="true">
+                    <th id="header_alertaFunc" class="max-w index-1" name="alertaFunc">
                         <label for="">Alerta de funcionamento</label>
                     </th>
-                    <th id="header_acoes" class="max-w" style="z-index: 1;" name="acoes" draggable="true">
+                    <th id="header_acoes" class="max-w index-1" name="acoes">
                         <label for="">Ações</label>
                     </th>
-                    <th id="header_serial" class="max-w" name="serial" draggable="true">
-                        <i id="search_serial" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_serial" class="max-w" name="serial">
+                        <i id="search_serial" class="search icon" ></i>
                         <label class="p-x-1">Serial</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por serial">
@@ -123,8 +144,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_placa" class="max-w" name="placa" draggable="true">
-                        <i id="search_placa" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_placa" class="max-w" name="placa">
+                        <i id="search_placa" class="search icon"></i>
                         <label class="p-x-1">Placa</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por placa">
@@ -134,8 +155,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_proprietario" class="max-w" name="proprietario" draggable="true" style="z-index: 1;">
-                        <i id="search_proprietario" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_proprietario" class="max-w index-1" name="proprietario">
+                        <i id="search_proprietario" class="search icon"></i>
                         <label class="p-x-1">Proprietário</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por proprietario">
@@ -145,8 +166,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_grupoVeiculo" class="max-w" name="grupoVeiculo" draggable="true">
-                        <i id="search_grupoVeiculo" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_grupoVeiculo" class="max-w" name="grupoVeiculo">
+                        <i id="search_grupoVeiculo" class="search icon"></i>
                         <label class="p-x-1">Grupo de veiculo</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por grupo veiculo">
@@ -156,8 +177,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_dtComunicacao" class="max-w" name="dtComunicacao" draggable="true">
-                        <i id="search_dtComunicacao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_dtComunicacao" class="max-w" name="dtComunicacao">
+                        <i id="search_dtComunicacao" class="search icon"></i>
                         <label class="p-x-1">Data comunicação</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="date" placeholder="Procurar por data de comunicação">
@@ -167,8 +188,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_dtPosicao" class="max-w" name="dtPosicao" draggable="true">
-                        <i id="search_dtPosicao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_dtPosicao" class="max-w" name="dtPosicao">
+                        <i id="search_dtPosicao" class="search icon"></i>
                         <label class="p-x-1">Data posição</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="date" placeholder="Procurar por data de posição">
@@ -178,8 +199,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_enderecoPosicao" class="max-w" name="enderecoPosicao" draggable="true">
-                        <i id="search_enderecoPosicao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_enderecoPosicao" class="max-w" name="enderecoPosicao">
+                        <i id="search_enderecoPosicao" class="search icon"></i>
                         <label class="p-x-1">Endereço posição</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por Endereço">
@@ -189,20 +210,20 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_longitude" class="max-w" name="longitude" draggable="true">
+                    <th id="header_longitude" class="max-w" name="longitude">
                         <label for="">Longitude</label>
                     </th>
-                    <th id="header_latitude" class="max-w" name="latitude" draggable="true">
+                    <th id="header_latitude" class="max-w" name="latitude">
                         <label for="">Latitude</label>
                     </th>
-                    <th id="header_eventos" class="max-w" name="eventos" draggable="true">
+                    <th id="header_eventos" class="max-w" name="eventos">
                         <i class="icon search check eventos"></i>
                         <label for="">Eventos</label>
                         <div id="popup_eventos" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_dtEvento" class="max-w" name="dtEvento" draggable="true">
-                        <i id="search_dtEvento" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_dtEvento" class="max-w" name="dtEvento">
+                        <i id="search_dtEvento" class="search icon"></i>
                         <label class="p-x-1">Data evento</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="date" placeholder="Procurar por data do evento">
@@ -212,14 +233,14 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_sinalValido" class="max-w" name="sinalValido" draggable="true">
+                    <th id="header_sinalValido" class="max-w" name="sinalValido">
                         <label for="">Sinal valido</label>
                         <i class="icon search check sinalValido"></i>
                         <div id="popup_sinalValido" class="ui custom popup right left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_itvlPosicao" class="max-w" name="itvlPosicao" draggable="true">
-                        <i id="search_itvlPosicao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_itvlPosicao" class="max-w" name="itvlPosicao">
+                        <i id="search_itvlPosicao" class="search icon"></i>
                         <label class="p-x-1">Intervalo de Posição</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="Intervalo de posição">
@@ -229,8 +250,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_itvlPosicaoSleepAtual" class="max-w" name="itvlPosicaoSleepAtual" draggable="true">
-                        <i id="search_itvlPosicaoSleepAtual" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_itvlPosicaoSleepAtual" class="max-w" name="itvlPosicaoSleepAtual">
+                        <i id="search_itvlPosicaoSleepAtual" class="search icon"></i>
                         <label class="p-x-1">Intervalo de Posição sleep atual</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="Intervalo de Posição sleep atual">
@@ -240,8 +261,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_itvlPosicaoSleepAnterior" class="max-w" name="itvlPosicaoSleepAnterior" draggable="true">
-                        <i id="search_itvlPosicaoSleepAnterior" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_itvlPosicaoSleepAnterior" class="max-w" name="itvlPosicaoSleepAnterior">
+                        <i id="search_itvlPosicaoSleepAnterior" class="search icon"></i>
                         <label class="p-x-1">Intervalo de Posição sleep anterior</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="Intervalo de Posição sleep atual">
@@ -251,14 +272,14 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_tipoIsca" class="max-w" name="tipoIsca" draggable="true">
+                    <th id="header_tipoIsca" class="max-w" name="tipoIsca">
                         <i class="icon search check tipoIsca"></i>
                         <label for="">Tipo de isca</label>
                         <div id="popup_tipoIsca" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_operadora" class="max-w" name="operadora" draggable="true">
-                        <i id="search_operadora" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_operadora" class="max-w" name="operadora">
+                        <i id="search_operadora" class="search icon"></i>
                         <label class="p-x-1">Operadora</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por operadora">
@@ -268,23 +289,23 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_dadosLBS" class="max-w" name="dadosLBS" draggable="true">
+                    <th id="header_dadosLBS" class="max-w" name="dadosLBS">
                         <label for="">Dados LBS</label>
                     </th>
-                    <th id="header_sinalgsm" class="max-w" name="sinalgsm" draggable="true">
+                    <th id="header_sinalgsm" class="max-w" name="sinalgsm">
                         <i class="icon search check sinalgsm"></i>
                         <label for="">Nivel de sinal GSM</label>
                         <div id="popup_sinalgsm" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_tipoSinal" class="max-w" name="tipoSinal" draggable="true">
+                    <th id="header_tipoSinal" class="max-w" name="tipoSinal">
                         <i class="icon search check tipoSinal"></i>
                         <label for="">Tipo de sinal</label>
                         <div id="popup_tipoSinal" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_dtExpiracao" class="max-w" name="dtExpiracao" draggable="true">
-                        <i id="search_dtExpiracao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_dtExpiracao" class="max-w" name="dtExpiracao">
+                        <i id="search_dtExpiracao" class="search icon"></i>
                         <label class="p-x-1">Data Expiração isca</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="date" placeholder="Procurar por data de expiração">
@@ -294,8 +315,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_diasExpiracao" class="max-w" name="diasExpiracao" draggable="true">
-                        <i id="search_diasExpiracao" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_diasExpiracao" class="max-w" name="diasExpiracao">
+                        <i id="search_diasExpiracao" class="search icon"></i>
                         <label class="p-x-1">Dias de expiraçao da isca</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="pesquisar por dia de expiração">
@@ -305,8 +326,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_temperatura" class="max-w" name="temperatura" draggable="true">
-                        <i id="search_temperatura" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_temperatura" class="max-w" name="temperatura">
+                        <i id="search_temperatura" class="search icon"></i>
                         <label class="p-x-1">Temperatura</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="pesquisar por temperatura">
@@ -316,14 +337,14 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_rfLigado" class="max-w" name="rfLigado" draggable="true">
+                    <th id="header_rfLigado" class="max-w" name="rfLigado">
                         <i class="icon search check rfLigado"></i>
                         <label for="">RF ligado</label>
                         <div id="popup_rfLigado" class="ui custom popup top left transition hidden"></div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_frequencia" class="max-w" name="frequencia" draggable="true">
-                        <i id="search_frequencia" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_frequencia" class="max-w" name="frequencia">
+                        <i id="search_frequencia" class="search icon"></i>
                         <label class="p-x-1">Frequência</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="pesquisar por frequencia">
@@ -333,8 +354,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_bateria" class="max-w" name="bateria" draggable="true">
-                        <i id="search_bateria" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_bateria" class="max-w" name="bateria">
+                        <i id="search_bateria" class="search icon"></i>
                         <label class="p-x-1">Bateria da isca</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="value" placeholder="porcentagem de bateria">
@@ -344,11 +365,11 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_observacao" class="max-w" style="z-index: 1;" name="observacao" draggable="true">
+                    <th id="header_observacao" class="max-w index-1" name="observacao">
                         <label for="">Observação</label>
                     </th>
-                    <th id="header_enderecoOrigem" class="max-w" style="z-index: 1;" name="enderecoOrigem" draggable="true">
-                        <i id="search_enderecoOrigem" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_enderecoOrigem" class="max-w index-1" name="enderecoOrigem">
+                        <i id="search_enderecoOrigem" class="search icon"></i>
                         <label class="p-x-1">Endereço de origem</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por Endereço origem">
@@ -358,8 +379,8 @@
                         </div>
                         <i class="sort alphabet up icon"></i>
                     </th>
-                    <th id="header_enderecoDestino" class="max-w" style="z-index: 1;" name="enderecoDestino" draggable="true">
-                        <i id="search_enderecoDestino" class="search icon" style="color: #b7b7b8;  margin: .87rem 0;"></i>
+                    <th id="header_enderecoDestino" class="max-w index-1" name="enderecoDestino">
+                        <i id="search_enderecoDestino" class="search icon"></i>
                         <label class="p-x-1">Endereço de destino</label>
                         <div class="ui action input d-none p-r-1">
                             <input type="text" class="letter" placeholder="Procurar por Endereço destino">
