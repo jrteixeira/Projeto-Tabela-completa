@@ -251,6 +251,11 @@
         #btn_return i:hover{
             color: white !important;
         }
+        @media(max-width: 800px){
+            #popup_acoes{
+                min-width: 300px !important;
+            }
+        }
 
         /* icons */
         thead i.icon.search:hover, thead i.icon.sort.alphabet:hover{

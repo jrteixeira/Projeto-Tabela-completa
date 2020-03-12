@@ -634,7 +634,7 @@
             statusAcoesMap = "<a style='padding: inherit;' data-tooltip='Exibir mapa'><i class='map marker alternate large icon'></i></a>"
         };
         if(acoes[1] = 1){
-            statusAcoesComando = "<a style='padding: inherit;' data-tooltip='Exibir comandos'><i class='bullseye large icon'></i></a>"
+            statusAcoesComando = "<a style='padding: inherit;'><i class='bullseye large icon'></i></a>"
         };
         if(acoes[2] = 1){
             statusAcoesDash = "<a style='padding: inherit;' data-tooltip='Exibir grafico'><i class='chart pie large icon'></i></a>"
@@ -771,11 +771,14 @@
     // Populando filtro de RF ligado
     let RfLigado = data.map(variavel => {
         return  variavel.rfLigado;
-});
-RfLigado = [ ...new Set( RfLigado ) ];
-RfLigado.forEach(signal =>{
-    $('#header_rfLigado .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_rfLigado_'+signal+'" name="'+signal+'"><label>'+signal+'</label></div>');
-});
+    });
+    RfLigado = [ ...new Set( RfLigado ) ];
+    RfLigado.forEach(signal =>{
+        $('#header_rfLigado .ui.custom.popup').append('<div class="ui checkbox"><input type="checkbox" id="id_rfLigado_'+signal+'" name="'+signal+'"><label>'+signal+'</label></div>');
+    });
+
+    const allcommand = document.querySelectorAll('tbody tr td a i.bullseye.large.icon'); // Array com todos os botões de comandos
+    console.log("Todos os botoes: "+allcommand)
 
     // Função que limpa listas auxiliares
     function limpaListasAuxiliares(){
@@ -1364,4 +1367,5 @@ RfLigado.forEach(signal =>{
             });
       }
 
-      
+    //  let widthPopup = document.querySelector(".panel-container").offsetWidth;
+    //  $("#popup_acoes").css("min-width", widthPopup - 37)

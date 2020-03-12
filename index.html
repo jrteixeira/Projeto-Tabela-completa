@@ -15,7 +15,7 @@
     <div class="se-pre-con"></div>
     <div class="panel-container">
         <div class="ui grid centered display-flex" style="margin-bottom: 1rem;">
-            <div class="ten wide tablet five wide computer column">
+            <div class="sixteen wide ten wide tablet five wide computer column">
                 <div class="ui grid">
                     <div class="sixteen wide computer column p-r-0 p-b-0" style="text-align: center;">
                         <div class="bg-blue">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="five wide tablet three wide computer column">
+            <div class="ten wide five wide tablet three wide computer column">
                 <div class="sixteen wide three wide tablet two wide computer column">
                     <div class="bg-red centered-text" style="height: 100%;display: grid;">
                         <div class="icon-panel">
@@ -132,6 +132,30 @@
                     </th>
                     <th id="header_acoes" class="max-w index-1" name="acoes">
                         <label for="">Ações</label>
+                        <div id="popup_acoes" class="ui custom popup top left transition hidden" style="min-width: 800px;">
+                            <div class="ui grid">
+                                <div class="sixteen wide eight wide tablet eight wide computer column">  
+                                    <select class="ui fluid dropdown">
+                                        <option value="">Comando</option>
+                                        <option value="1">Male</option>
+                                        <option value="0">Female</option>
+                                    </select>
+                                </div> 
+                                <div class="sixteen wide eight wide tablet eight wide computer column">  
+                                    <select class="ui fluid dropdown">
+                                        <option value="">Tentar envio ate confirmação de recebimento</option>
+                                        <option value="1">Male</option>
+                                        <option value="0">Female</option>
+                                    </select>
+                                </div> 
+                                <div class="sixteen wide eight wide tablet eight wide computer column">  
+                                    <button class="ui blue fluid button">Atualizar</button>
+                                </div>
+                                <div class="sixteen wide eight wide tablet eight wide computer column">  
+                                    <button class="ui blue fluid button">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
                     </th>
                     <th id="header_serial" class="max-w" name="serial">
                         <i id="search_serial" class="search icon" ></i>
@@ -425,6 +449,14 @@
             position : 'bottom center'
         })
         ;
+        // Ativação de popup dos botões de comandos
+        $(document).ready(function(){
+            $('.bullseye.large.icon').popup({
+                popup : $('#popup_acoes'),
+                on    : 'click',
+                position : 'top center'
+            });
+        })
         // Ativação de popup eventos
         $('.icon.search.check.eventos')
         .popup({
@@ -472,6 +504,9 @@
             on    : 'click',
             position : 'bottom center'
         })
+        ;
+        $('.ui.dropdown')
+        .dropdown()
         ;
         // ]]>
     </script>
