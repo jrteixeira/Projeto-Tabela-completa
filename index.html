@@ -132,27 +132,31 @@
                     </th>
                     <th id="header_acoes" class="max-w index-1" name="acoes">
                         <label for="">Ações</label>
-                        <div id="popup_acoes" class="ui custom popup top left transition hidden" style="min-width: 800px;">
+                        <div id="popup_acoes" class="ui command modal" style="min-width: 800px;padding: 1.5rem;">
+                            <a onclick="fechaPopup()" class="exit-button">
+                                <i class="ui close icon"></i>
+                            </a>
                             <div class="ui grid">
                                 <div class="sixteen wide eight wide tablet eight wide computer column">  
+                                    <span></span>
                                     <select class="ui fluid dropdown">
                                         <option value="">Comando</option>
-                                        <option value="1">Male</option>
-                                        <option value="0">Female</option>
+                                        <option value="1">Bloquear veiculo</option>
+                                        <option value="0">acionar buzzer</option>
                                     </select>
                                 </div> 
                                 <div class="sixteen wide eight wide tablet eight wide computer column">  
                                     <select class="ui fluid dropdown">
                                         <option value="">Tentar envio ate confirmação de recebimento</option>
-                                        <option value="1">Male</option>
-                                        <option value="0">Female</option>
+                                        <option value="1">Sim</option>
+                                        <option value="0">Não</option>
                                     </select>
                                 </div> 
                                 <div class="sixteen wide eight wide tablet eight wide computer column">  
                                     <button class="ui blue fluid button">Atualizar</button>
                                 </div>
                                 <div class="sixteen wide eight wide tablet eight wide computer column">  
-                                    <button class="ui blue fluid button">Fechar</button>
+                                    <button onclick="fechaPopup()" class="ui blue fluid button">Fechar</button>
                                 </div>
                             </div>
                         </div>
@@ -450,13 +454,22 @@
         })
         ;
         // Ativação de popup dos botões de comandos
-        $(document).ready(function(){
-            $('.bullseye.large.icon').popup({
-                popup : $('#popup_acoes'),
-                on    : 'click',
-                position : 'top center'
-            });
-        })
+        // function abrePop(){
+        //     $(this).popup({
+        //         popup : $('#popup_acoes'),
+        //         on    : 'click'
+        //     });
+        // }
+        function abrePopup(){
+        $('.ui.command.modal')
+        .modal('show')
+        ;
+        }
+        function fechaPopup(){
+        $('.ui.command.modal')
+        .modal('hide')
+        ;
+        }
         // Ativação de popup eventos
         $('.icon.search.check.eventos')
         .popup({

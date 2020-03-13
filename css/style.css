@@ -133,6 +133,18 @@
         .white-color, .white-color:hover{
             color: white !important;
         }
+        .exit-button{
+            float: right;
+            margin-top: -10px;
+            margin-right: -9px;
+            font-weight: bold;
+            color: black;
+        }
+        .exit-button:hover{
+            cursor: pointer !important;
+            transform: scale(1.1);
+            color: black;
+        }
         .panel-container{
             position: static;
             top: 1;

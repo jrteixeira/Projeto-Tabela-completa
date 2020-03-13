@@ -634,7 +634,7 @@
             statusAcoesMap = "<a style='padding: inherit;' data-tooltip='Exibir mapa'><i class='map marker alternate large icon'></i></a>"
         };
         if(acoes[1] = 1){
-            statusAcoesComando = "<a style='padding: inherit;'><i class='bullseye large icon'></i></a>"
+            statusAcoesComando = "<a style='padding: inherit;' onclick='abrePopup()'><i class='bullseye large icon'></i></a>"
         };
         if(acoes[2] = 1){
             statusAcoesDash = "<a style='padding: inherit;' data-tooltip='Exibir grafico'><i class='chart pie large icon'></i></a>"
