@@ -634,7 +634,7 @@
             statusAcoesMap = "<a style='padding: inherit;' data-tooltip='Exibir mapa'><i class='map marker alternate large icon'></i></a>"
         };
         if(acoes[1] = 1){
-            statusAcoesComando = "<a style='padding: inherit;' onclick='abrePopup()'><i class='bullseye large icon'></i></a>"
+            statusAcoesComando = "<a style='padding: inherit;' onclick='abrePopup()' data-tooltip='Acionar comando'><i class='bullseye large icon'></i></a>"
         };
         if(acoes[2] = 1){
             statusAcoesDash = "<a style='padding: inherit;' data-tooltip='Exibir grafico'><i class='chart pie large icon'></i></a>"
@@ -1361,11 +1361,9 @@
                 break;
             }
         }
+        debugger
         section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
+            block: "start",
+            behavior: "smooth",
             });
       }
-
-    //  let widthPopup = document.querySelector(".panel-container").offsetWidth;
-    //  $("#popup_acoes").css("min-width", widthPopup - 37)
